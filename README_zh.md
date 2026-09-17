@@ -12,8 +12,10 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 
 - [Jev 是什么？](#jev-是什么)
 - [官方资源](#官方资源)
+- [社区](#社区)
 - [SDK 与客户端](#sdk-与客户端)
 - [应用](#应用)
+- [Demo 与游戏](#demo-与游戏)
 - [Agent 工具](#agent-工具)
 - [研究与开源模型](#研究与开源模型)
 - [Cookbook](#cookbook)
@@ -45,6 +47,16 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Agent skill](https://docs.typesafe.ai/agent-skill) - 给 Claude Code、Codex 等编程 Agent 用的技能包（[`typesafe-ai/skills`](https://github.com/typesafe-ai/skills)）。
 - [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - 当前公开模型已知的毛边与失败模式。
 - [Introducing System One Models and Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) - 发布博文：架构、定价、Doom / Wikiracing demo、FAQ。
+- [Vercel AI Gateway 上的 Jev](https://vercel.com/ai-gateway/models/jev) - 托管的 `typesafe-ai/jev`，走 AI SDK `evaluate`，不必等 TypeSafe waitlist。
+- [Manifesto](https://typesafe.ai/manifesto) - 主张给软件用的机器原生智能，而不是聊天。
+- [The Bitterest Lesson](https://typesafe.ai/blog/bitterest-lesson) - 优化错任务，规模再大也盖不过。
+- [AI: too good to be true, too bad to be useful](https://typesafe.ai/blog/ai-too-good-to-be-true-too-bad-to-be-useful-typesafe-ai) - 自动化不该用偏好对齐过的聊天模型。
+
+## 社区
+
+- [Discord](https://discord.gg/typesafe) - TypeSafe 官方服务器。Builder demo 在 [Show and Tell](https://discord.com/channels/1483217544214085663/1483217545040232493)。
+- [X @typesafeai](https://x.com/typesafeai) - 产品与研究动态。
+- [LinkedIn](https://www.linkedin.com/company/typesafe-ai/) - 公司公告与招聘。
 
 ## SDK 与客户端
 
@@ -55,6 +67,16 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [System One adapter（Python）](https://github.com/typesafe-ai/system-one-adapter-python) - 官方提供的 `TypeSafeClient` 替身，后端走 LLM API，方便用同一套问题对比 Jev 与聊天模型。`pip install system-one-adapter`。
 - [Vercel AI SDK provider](https://ai-sdk.dev/providers/ai-sdk-providers/typesafe-ai) - `@ai-sdk/typesafe-ai` + `experimental_evaluate`。可用 `typeSafeAi.evaluationModel('jev-latest')`，或 Gateway id `typesafe-ai/jev`。
 - [Elixir SDK](https://github.com/nshkrdotcom/typesafe_sdk) - 社区 Hex 包 [`typesafe_sdk`](https://hex.pm/packages/typesafe_sdk)，支持 `system_one` 与模型列表。文档：[HexDocs](https://hexdocs.pm/typesafe_sdk)。
+- [Ruby SDK](https://github.com/joshmn/typesafe-sdk) - 社区 Ruby 3.1+ 客户端：Noul / Choice / Score、重试、模型列表、线程安全连接池。没有异步客户端。
+- [RubyLLM TypeSafe](https://github.com/kieranklaassen/ruby_llm-typesafe) - RubyLLM 2 的 TypeSafe provider，带离线模型元数据和类型化响应。
+- [typesafe-ai-rails](https://github.com/GenieRobot/typesafe-ai-rails) - 基于官方 Python SDK 的 Rails 集成：配置、用量/成本遥测、可选置信度策略。
+- [Rust SDK (typesafe-ai-rs)](https://github.com/gilljon/typesafe-ai-rs) - 独立的异步 / 阻塞 System One 客户端。
+- [TypeSafe AI for Rust](https://github.com/Twister915/typesafe-ai) - 另一个 Rust 客户端：异步 + 阻塞传输、类型化响应、可观测重试。
+- [typesafe-rs](https://github.com/AbdelStark/typesafe-rs) - 偏延迟的 Rust 传输 SDK，目标对齐官方客户端行为。
+- [s1-rs](https://github.com/AbdelStark/s1-rs) - Rust derive 层：Choice / Score / Noul、类型化问题集、置信度门控、无网络测试。
+- [Advocaat](https://github.com/pithings/advocaat) - 小型 TypeScript 客户端，给 chance / choice / score 打了 tagged helper。
+- [Scala / ZIO SDK](https://github.com/jamesward/zio-typesafe-ai) - 社区 ZIO 客户端，带 noul / choice / score 的小 DSL。
+- [.NET SDK](https://github.com/saibimajdi/typesafe-dotnet-sdk) - 社区客户端，类型化问题 + 带置信度的答案。
 
 ## 应用
 
@@ -62,14 +84,53 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - [Browser Use](https://github.com/browser-use) 的浏览器 Agent。一次请求里由 Jev 选出操作和 DOM 元素；只有 `TYPE_TEXT` 才让小模型写字。Google Flights 苏黎世 → 伦敦约 7 秒。含库、本地 inspector 与测时。
 - [jev-browser](https://github.com/Ying-Kai-Liao/jev-browser) - 非官方浏览器自动化：LLM 规划目标，Jev 在 Playwright 快照上决定每次点击/输入（约 300 ms/次）。提供库、CLI 与 MCP 服务（`npx -y -p jev-browser jev-browser-mcp`）。
+- [Jev Browser（Vlad Terin）](https://github.com/vlad-terin/jev-browser) - Agent skill + 运行时：Codex 规划，Jev 选元素，runner 执行并逐步校验。
+- [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - macOS computer-use：OCR 屏幕，Jev 分类下一步动作再点击。约 $0.0002/步。
+- [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
+- [Jev Review](https://github.com/devagrawal09/jev-review) - 分阶段代码审查工作流 + 本地 dashboard，由聚焦的 Jev 调用驱动。
+- [Jev Drone](https://github.com/RomanSlack/jev-drone) - MuJoCo 四旋翼：控制和安全留在代码里，Jev 做较慢的战术判断。
+- [Jev Plays StarCraft](https://github.com/phyous/tsai-sc) - 原版星际争霸共享战役的结构化 state harness，带验证跑次和概率轨迹。
+- [Jev Trader](https://github.com/jarrodwatts/jev-trader) - 每个 Monad 区块对 Kuru 的 MON-USDC 下一笔买卖。在线 demo：[jev-trader.vercel.app](https://jev-trader.vercel.app/)。
+- [Human Compiler](https://github.com/asfarsadewa/human-compiler) - 粘贴职场废话，Jev 打被动攻击 / 紧急感 / 信息密度，代码按 rustc 风格报诊断。在线：[human-compiler.asfarlab.fun](https://human-compiler.asfarlab.fun)。
+- [jev-audio-beeper](https://github.com/santos-sanz/jev-audio-beeper) - 低延迟音频脏话检测：Jev 判定后 ffmpeg 在约 466 ms 内叠一声 beep，不改其余音轨。
+- [jev-askable-arm](https://github.com/TarunTomar122/jev-askable-arm) - 仿真 Franka 上用英文目标做 zero-shot；Jev 把硬编码原语串起来。
+- [jev-codex-router](https://github.com/0xNatoshi/jev-codex-router) - Codex 每轮路由：Jev 选模型、思考深度和速度模式。
+- [jev-secret-detection](https://github.com/teyhouse/jev-secret-detection) - 用 Jev 扫 diff 里的密钥，结果可复现。
+- [jev-eval-agent](https://github.com/vinilana/jev-eval-agent) - 早期 Jev 测试的公开评测 harness。
 - [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - 官方互动 demo，演示 [speculative fan-out](https://docs.typesafe.ai/patterns/fan-out)：一次请求问很多题，代码留下有用的答案，LLM 只负责拆分复合指令和闲聊。源码计划随发布上 GitHub。
+
+## Demo 与游戏
+
+发布后 48 小时内涌出来的玩具、小站和实时 Agent。
+
+- [Yes / No](https://yesno.coderai.dev) - 免登录 Noul demo。问一句，得到 yes / no / maybe，必要时联网检索。
+- [Jev Tetris](https://jev-omega.vercel.app) - Jev 根据空洞、堆高、起伏选旋转和落点列。
+- [Jev Pac-Man](https://jev-pacman.ephraimduncan.com) - 迷宫做成 JSON，每个路口由 Jev 选转向，实时玩。
+- [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - 从结构化模拟器状态玩超级马里奥。
+- [jev-doom-agent](https://github.com/lukaske/jev-doom-agent) - 浏览器里的 Doom（Chocolate Doom WASM），空间状态 + 实时决策遥测。
+- [jev-gomoku](https://github.com/mizchi/jev-gomoku) - MoonBit 客户端 + Jev 对打五子棋。文章：[jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku)。
+- [jev-t-rex-runner](https://github.com/joshlarsen/jev-t-rex-runner) - Chrome 小恐龙由 Jev 来跳。
+- [snake-jev](https://github.com/siroccomask/snake-jev) - 贪吃蛇：每局几百次类型化转向决策。
+- [Jev Guard](https://guard-jev.vercel.app) - 评论审核 playground。
+- [Hollow Creek](https://hollow-creek-sigma.vercel.app) - 村庄 NPC 每个 tick *评判*你（做什么、对你什么感觉），而不是聊天。
+- [Jev mood demo](https://jev-demo.vercel.app) - 长时间对它好或坏，结构化 state 跟踪心情。
+- [Jev Room](https://jev-room.moe136231.chatgpt.site) - 一句话 → 六个房间设定。Jev 选，应用渲染。
+- [TypeSafe Typewriter](https://typesafe-demo.val.run/) - Val Town 在线 demo：打字时 16 条类型化判断实时更新。发布帖：[Steve Krouse](https://x.com/stevekrouse/status/2100287368221659289)。
 
 ## Agent 工具
 
 把 Jev 接到编程 Agent 与 MCP 客户端上的工具。
 
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - 官方技能包：原语、模式、如何组织 evaluation。Claude Code：`claude plugin marketplace add typesafe-ai/skills`，再 `claude plugin install typesafe@typesafe-ai`。其他 Agent：`npx skills add typesafe-ai/skills --skill typesafe-ai`。
-- [jev-mcp](https://github.com/jkudish/jev-mcp) - MCP 服务，封装三条 cookbook：`jev_verify`（引文核验）、`jev_screen`（注入/护栏）、`jev_find`（无需 embedding 的语义排序）。`npx -y github:jkudish/jev-mcp`。
+- [jev-mcp](https://github.com/jkudish/jev-mcp) - Node MCP，封装三条 cookbook：`jev_verify`（引文核验）、`jev_screen`（注入/护栏）、`jev_find`（无需 embedding 的语义排序）。`npx -y github:jkudish/jev-mcp`。
+- [Jev MCP（Python）](https://github.com/blakestone-x/jev-mcp) - Python MCP：classify、score、check、match、screen。
+- [typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp) - Go CLI + 单二进制 MCP，适配 Claude Desktop、Claude Code、Codex。
+- [pi-typesafe](https://github.com/DevMortimer/pi-typesafe) - Pi 扩展：一份经同意的、密钥托管的 TypeSafe 客户端，批量 `typesafe_evaluate`，可离线测传输。
+- [pi-jev](https://github.com/y0usaf/pi-jev) - Pi 扩展：影子模式工具调用门控、输出评判、类型化 `jev_ask`。
+- [pi-warden](https://github.com/DevMortimer/pi-warden) - 基于 pi-typesafe 的 Pi 护栏：把判决当成 held tool result 而不是对话框；对照项目规则文件检查写入。
+- [Bicameral](https://github.com/AbdelStark/bicameral) - Pi 编程 harness：LLM 写代码，Jev 提供策略、循环检测和 review 的类型化反射。明确不是沙箱。
+- [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill：Agent 需要有界决策时去问 Jev。
+- [jev-system-architect](https://github.com/samtay32/jev-system-architect) - 专门找脆弱语义逻辑、改写成 Choice / Score / Noul 边界的 skill。
 - [jev-browser MCP](https://github.com/Ying-Kai-Liao/jev-browser) - 同上项目；MCP 工具 `browser_do`、`browser_check`、`browser_choose`，Agent 不必读完整页面快照也能操作页面。
 
 ## 研究与开源模型
@@ -77,6 +138,11 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 受 Jev 接口启发的独立工作。它们不是 TypeSafe 的模型。
 
 - [jevlike](https://github.com/vinnylarouge/jevlike) - 训练一个小的单次 scorer：上下文 + N 个文本选项 → 每个选项一个概率。含 Doom / 国际象棋视觉 demo，以及 Wikispeedia 下一跳例子。明确*不是* TypeSafe 架构或 RLCD 的复现。
+- [openjev](https://github.com/TheoLeeCJ/openjev) - 家用 RTX 3090 能不能跑 Jev 风格的东西？直接读选项 logits，不生成文本。不是 TypeSafe 的模型。
+- [PocketJev](https://github.com/NullPo-jp/PocketJev) - iPhone 端侧视觉判断：MLX + Qwen3-VL 选项 logits。相机 + 三选一，不生成文字，约 1 秒，不存照片。
+- [typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) - 同一套 System One 问题，对比 Jev 与 Cerebras 上的 Qwen 3.8 27B。视频：[Shannon](https://x.com/iamMrDuncan/status/2100467548298899918)。
+- [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) - 重排序对比：原始 provider 响应、打分代码、不确定区间、写明的局限。
+- [Jev Spam Eval](https://github.com/bitnovus/jev-spam-eval) - 探索性零样本垃圾邮件研究，对照训练过的 TF-IDF 基线，并写了事后调参的 caveat。
 
 ## Cookbook
 
@@ -121,6 +187,9 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [He Says He Co-Invented ChatGPT. His New AI, Jev, Won't Write a Word](https://dev.to/gabrielanhaia/he-says-he-co-invented-chatgpt-his-new-ai-jev-wont-write-a-word-e3c) - Vercel AI SDK `experimental_evaluate` provider 的走读。
 - [What Is Jev?](https://mohammedshehu.com/jev-typesafe-ai/) - 短文入门，带 Python 工单分流示例。
 - [TypeSafe AI debuts model for machines that plays Doom](https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711) - 发布新闻报道。
+- [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - 日文走读：Jev 是什么、不是什么。
+- [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - Jev 对打五子棋，带源码和耗时日志。
+- [Typed Decisions, Not Chat](https://warmersun.com/jev/) - 独立走读：把 TypeSafe 公开主张和公开证据分开。
 
 ## 相关
 
