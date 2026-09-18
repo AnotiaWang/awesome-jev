@@ -185,6 +185,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jevmlx](https://github.com/bnsd55/jevmlx) - 给任意 MLX 模型做 Jev 风格并行约束决策：一次前向得到带概率的、按 schema 合法的 JSON
 - [JEVfire](https://github.com/kikoncuo/jevfire) - CUDA LLM 上的 Jev 风格并行决策（vLLM），带浏览器马里奥 demo（本地约 71 ms/步）
 - [decider](https://github.com/Mapika/decider) - 基于 Qwen3.5-2B 的微调：一次前向就给出类型化决策和校准概率。非官方，不是 TypeSafe 的架构。
+- [LitJev](https://github.com/zhengxuyu/litjev) - Jev 的复现：把任意 Qwen 模型变成快速决策模型，提供与 Jev 相同的 `/v1/systemone` schema（Choice、Score、Noul），不训练、不生成回答文本。非官方，不是 TypeSafe 的模型。
 - [typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) - 同一套 System One 问题，对比 Jev 与 Cerebras 上的 Qwen 3.8 27B。视频：[Shannon](https://x.com/iamMrDuncan/status/2100467548298899918)。
 - [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) - 重排序对比：原始 provider 响应、打分代码、不确定区间、写明的局限。
 - [Jev Spam Eval](https://github.com/bitnovus/jev-spam-eval) - 探索性零样本垃圾邮件研究，对照训练过的 TF-IDF 基线，并写了事后调参的 caveat。
