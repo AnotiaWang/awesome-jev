@@ -217,6 +217,7 @@ Independent write-ups and news. Official posts live under [Official](#official).
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - Japanese walkthrough: what Jev is and is not.
 - [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - Jev vs Jev gomoku with source and timing logs.
 - [Typed Decisions, Not Chat](https://warmersun.com/jev/) - Independent walkthrough that separates TypeSafe's published claims from public evidence.
+- [Jev: one judge call, or twelve dimension scores? I measured both on three tasks](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) - Independent measurement on three classification tasks: one direct Jev question per row against 12–14 Jev-scored dimensions with locally fitted weights, with token costs, confidence intervals, and false-positive rates.
 
 ## Related
 
