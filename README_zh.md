@@ -214,6 +214,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - 日文走读：Jev 是什么、不是什么。
 - [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - Jev 对打五子棋，带源码和耗时日志。
 - [Typed Decisions, Not Chat](https://warmersun.com/jev/) - 独立走读：把 TypeSafe 公开主张和公开证据分开。
+- [Jev: one judge call, or twelve dimension scores? I measured both on three tasks](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) - 独立实测：三个分类任务上，每行一次直接提问 vs 12–14 个 Jev 维度加本地拟合权重，附 token 成本、置信区间与误报率。
 
 ## 相关
 
