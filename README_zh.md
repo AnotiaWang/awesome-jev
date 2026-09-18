@@ -67,6 +67,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [System One adapter（Python）](https://github.com/typesafe-ai/system-one-adapter-python) - 官方提供的 `TypeSafeClient` 替身，后端走 LLM API，方便用同一套问题对比 Jev 与聊天模型。`pip install system-one-adapter`。
 - [Vercel AI SDK provider](https://ai-sdk.dev/providers/ai-sdk-providers/typesafe-ai) - `@ai-sdk/typesafe-ai` + `experimental_evaluate`。可用 `typeSafeAi.evaluationModel('jev-latest')`，或 Gateway id `typesafe-ai/jev`。
 - [Elixir SDK](https://github.com/nshkrdotcom/typesafe_sdk) - 社区 Hex 包 [`typesafe_sdk`](https://hex.pm/packages/typesafe_sdk)，支持 `system_one` 与模型列表。文档：[HexDocs](https://hexdocs.pm/typesafe_sdk)。
+- [Jev（Elixir OTP）](https://github.com/dannote/jev) - Hex 包 [`jev`](https://hex.pm/packages/jev)：把 Jev 当成对等 GenServer，答案以消息到达再 pattern match，测试可以不碰网络
 - [Ruby SDK](https://github.com/joshmn/typesafe-sdk) - 社区 Ruby 3.1+ 客户端：Noul / Choice / Score、重试、模型列表、线程安全连接池。没有异步客户端。
 - [RubyLLM TypeSafe](https://github.com/kieranklaassen/ruby_llm-typesafe) - RubyLLM 2 的 TypeSafe provider，带离线模型元数据和类型化响应。
 - [typesafe-ai-rails](https://github.com/GenieRobot/typesafe-ai-rails) - 基于官方 Python SDK 的 Rails 集成：配置、用量/成本遥测、可选置信度策略。
@@ -82,6 +83,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-go](https://github.com/Gaurav-Gosain/jev-go) - 非官方 Go 客户端，返回类型化判断与校准概率。`go get github.com/Gaurav-Gosain/jev-go`。
 - [Stumble/jev-go](https://github.com/Stumble/jev-go) - 非官方零依赖 Go SDK，支持 TypeSafe 直连和 Vercel AI Gateway，并提供类型化问题、重试、交互式 CLI 和可安装的 agent skill
 - [jevclient](https://github.com/AboveColin/jevclient) - 非官方异步 Python 客户端（`pip install jevclient`）。带 Noul / Choice / Score helper，与官方 `typesafe-sdk` 不是同一个包。
+- [Swift SDK](https://github.com/ainame/swift-typesafe) - 非官方 Swift 6.4 客户端，对齐 Python SDK 0.6.0 API，含 Linux
 
 ## 应用
 
@@ -94,13 +96,25 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - macOS computer-use：OCR 屏幕，Jev 分类下一步动作再点击。约 $0.0002/步。
 - [Mobile Jev](https://github.com/droidrun/mobile-jev) - [Mobilerun](https://mobilerun.ai) 上的 Android Agent：每次点击由 Jev 决定。打开 Uber，旧金山机场 → 金门大桥，约 21 秒 / 9 步到支付页。含实时 studio、CLI 与 traces。不需要 ADB。
 - [Unclutter](https://github.com/kitze/unclutter) - Chrome / Firefox 扩展：Jev 标出页面上不重要的元素，本地按页面模板记住并在下次访问时藏起来。
+- [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome 扩展：Jev 判断 DOM 元素是不是广告再删掉。自带密钥、无后端。作者写明这是 demo，不是正经广告拦截器
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - 非官方 Home Assistant 集成：把关于实体状态的类型化提问变成传感器与自动化动作；可直接选取实体、设备或区域来构造 state，并附带用量、成本与每日 token 预算实体
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
+- [blink](https://github.com/ellipsis-dev/blink) - 代码库搜索：一组 walker 并行走文件系统，由 Jev 判断哪个文件能回答自然语言查询
 - [Jev Search](https://github.com/superagents-lab/jev-search) - 非官方网页搜索应用：用 Jev 的 Choice 和 Noul 判断选择来源、时间范围和候选查询词，再对 Search1API 返回的结果进行相关性排序
+- [neo4jev](https://github.com/jexp/neo4jev) - Neo4j 图导航：每个节点上由 Jev 选择跟哪条关系走，并对 log 概率做 beam search
+- [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - 实验性 Hono 路由器：用自然语言描述路由，由 Jev 匹配进来的请求
+- [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C 扩展：把 `jev_noul` / `jev_choice` / `jev_score` 做成 SQL 函数，只依赖 libcurl
+- [jev-resilience](https://github.com/Vicente-MD/jev-resilience) - 非官方 Spring WebFlux starter：语义熔断器，用 Jev 抓 HTTP 200 里的静默失败
+- [tripwire](https://github.com/noelzappy/tripwire) - 非官方 AI SDK middleware 与 OpenAI 兼容代理：约 100 ms 内对每条 LLM 回复做七项 Jev 检查，按置信度门控
+- [ProgressGate](https://github.com/AshutoshVJTI/progressgate) - 检测 Agent 循环里的语义停滞：Jev 评判轨迹，代码返回 CONTINUE / WARN / REPLAN / HALT
+- [jev-harness](https://github.com/AntonioCoppe/jev-harness) - 非官方生产层：策略、置信度门控、影子模式、配方和 eval CLI
+- [jev-tree](https://github.com/reachjalil/jev-tree) - 在分类树上递归做 Choice，突破 Jev 单次最多 255 个选项的上限
+- [jev-shell-history](https://github.com/mrnugget/jev-shell-history) - Fish 风格的 zsh 自动补全：输入时由 Jev 给近期历史排序
 - [Jev Review](https://github.com/devagrawal09/jev-review) - 分阶段代码审查工作流 + 本地 dashboard，由聚焦的 Jev 调用驱动。
 - [Foreman](https://github.com/thruwire/foreman) - 软件工厂循环：Codex 写实现，Jev 独立判断是否做完、测试够不够、要不要人来看。
 - [Jev Drone](https://github.com/RomanSlack/jev-drone) - MuJoCo 四旋翼：控制和安全留在代码里，Jev 做较慢的战术判断。
 - [Jev Plays StarCraft](https://github.com/phyous/tsai-sc) - 原版星际争霸共享战役的结构化 state harness，带验证跑次和概率轨迹。
+- [Jev × Civilization II](https://github.com/phyous/tsai-civ2) - 浏览器里跑原版文明 II；Jev 选帝国、城市、科研和单位动作。实验性，尚未验证通关
 - [Jev Trader](https://github.com/jarrodwatts/jev-trader) - 每个 Monad 区块对 Kuru 的 MON-USDC 下一笔买卖。在线 demo：[jev-trader.vercel.app](https://jev-trader.vercel.app/)。
 - [Human Compiler](https://github.com/asfarsadewa/human-compiler) - 粘贴职场废话，Jev 打被动攻击 / 紧急感 / 信息密度，代码按 rustc 风格报诊断。在线：[human-compiler.asfarlab.fun](https://human-compiler.asfarlab.fun)。
 - [JEVMETER](https://github.com/ChetasLua/jevmeter) - 给任意视频挂上实时 Jev 仪表：逐句打分，导出 16:9 成片。演示：[Chetaslua](https://x.com/chetaslua/status/2100473581251748216)。
@@ -139,6 +153,9 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 把 Jev 接到编程 Agent 与 MCP 客户端上的工具。
 
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - 官方技能包：原语、模式、如何组织 evaluation。Claude Code：`claude plugin marketplace add typesafe-ai/skills`，再 `claude plugin install typesafe@typesafe-ai`。其他 Agent：`npx skills add typesafe-ai/skills --skill typesafe-ai`。
+- [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code 插件 + npm 库：用 Jev 给工具调用打分并丢掉过时的，而不是把上下文摘要掉
+- [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI：根据当前会话上下文，让 Jev 给下一步该用哪个 agent skill 排序，带 Claude Code hook
+- [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - 非官方 ACP/MCP 适配器：把 Jev 的类型化判断和 computer use 接到 Codex、Claude、Grok、OpenCode 旁边
 - [eve](https://github.com/vercel/eve) - Vercel 的 Agent 框架。实验性 `autoModel` 默认用 Gateway 上的 `typesafe-ai/jev`，从白名单里挑语言模型。
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - Node MCP，封装三条 cookbook：`jev_verify`（引文核验）、`jev_screen`（注入/护栏）、`jev_find`（无需 embedding 的语义排序）。`npx -y github:jkudish/jev-mcp`。
 - [Jev MCP（Python）](https://github.com/blakestone-x/jev-mcp) - Python MCP：classify、score、check、match、screen。
@@ -162,6 +179,9 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jevlike](https://github.com/vinnylarouge/jevlike) - 训练一个小的单次 scorer：上下文 + N 个文本选项 → 每个选项一个概率。含 Doom / 国际象棋视觉 demo，以及 Wikispeedia 下一跳例子。明确*不是* TypeSafe 架构或 RLCD 的复现。
 - [openjev](https://github.com/TheoLeeCJ/openjev) - 家用 RTX 3090 能不能跑 Jev 风格的东西？直接读选项 logits，不生成文本。不是 TypeSafe 的模型。
 - [PocketJev](https://github.com/NullPo-jp/PocketJev) - iPhone 端侧视觉判断：MLX + Qwen3-VL 选项 logits。相机 + 三选一，不生成文字，约 1 秒，不存照片。
+- [jev-visual](https://github.com/hr98w/jev-visual) - Apple Silicon 上的教学向 Jev 风格视觉推理：共享多模态上下文、候选打分，含分拣厂 / Breakout / 手势 demo。不是 TypeSafe 的模型
+- [jevmlx](https://github.com/bnsd55/jevmlx) - 给任意 MLX 模型做 Jev 风格并行约束决策：一次前向得到带概率的、按 schema 合法的 JSON
+- [JEVfire](https://github.com/kikoncuo/jevfire) - CUDA LLM 上的 Jev 风格并行决策（vLLM），带浏览器马里奥 demo（本地约 71 ms/步）
 - [decider](https://github.com/Mapika/decider) - 基于 Qwen3.5-2B 的微调：一次前向就给出类型化决策和校准概率。非官方，不是 TypeSafe 的架构。
 - [typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) - 同一套 System One 问题，对比 Jev 与 Cerebras 上的 Qwen 3.8 27B。视频：[Shannon](https://x.com/iamMrDuncan/status/2100467548298899918)。
 - [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) - 重排序对比：原始 provider 响应、打分代码、不确定区间、写明的局限。
@@ -171,6 +191,9 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) - 公开语料上的盲测：提示注入和漏洞代码检测，基于 jev-go。
 - [Jev DSPy Lab](https://github.com/jmanhype/jev-dspy-lab) - 非官方 DSPy 配套评测：录制并重放 TypeSafe 调用，测量校准、选择性风险、置信度弃权、延迟、token 和建模成本。
 - [jevcal](https://github.com/abhixhek/jevcal) - 非官方命令行工具：用你自己的标注数据按目标准确率为每个问题拟合置信度阈值，在留出集上验证，给出仍需回退到 LLM 的流量比例，并在 Jev 更新导致已锁定阈值失效时让 CI 失败
+- [ASSAY-001](https://github.com/jourdanlabs/assay-001) - 独立预注册核验：Banking77 / CLINC150 上测 Jev 校准与类型安全。结论分裂，日志全公开。文章：[donttrustme.ai](https://donttrustme.ai/assay-001.html)
+- [Jev search rerank eval](https://github.com/zhuyansen/jev-search-rerank-eval) - 9831 对标注：Jev rerank 对照 BM25 / bge-m3，并量化评委循环偏差。融合最好；Jev 单独打不过 embedding
+- [吸烟史抽取评测](https://github.com/vclic/smoking-extraction-benchmark) - 1000 条合成病历：Jev 对 OpenAI structured outputs，比准确率、成本和延迟
 
 ## Cookbook
 
@@ -214,6 +237,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - 用 Gemma 的 logit 并行复现 JSON 捷径，并在公开 Mario harness 上对比 Jev 与 LLM。
 - [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - Jev 对打五子棋，带源码和耗时日志。
 - [Jev: one judge call, or twelve dimension scores? I measured both on three tasks](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) - 独立实测：三个分类任务上，每行一次直接提问 vs 12–14 个 Jev 维度加本地拟合权重，附 token 成本、置信区间与误报率。
+- [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16000 次调用对照 gpt-5.4-mini 与 gpt-5.6-luna：哪里赢、哪里崩、阈值怎么定
 
 ## 相关
 
