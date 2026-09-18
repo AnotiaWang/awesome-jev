@@ -84,6 +84,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Stumble/jev-go](https://github.com/Stumble/jev-go) - 非官方零依赖 Go SDK，支持 TypeSafe 直连和 Vercel AI Gateway，并提供类型化问题、重试、交互式 CLI 和可安装的 agent skill
 - [jevclient](https://github.com/AboveColin/jevclient) - 非官方异步 Python 客户端（`pip install jevclient`）。带 Noul / Choice / Score helper，与官方 `typesafe-sdk` 不是同一个包。
 - [Swift SDK](https://github.com/ainame/swift-typesafe) - 非官方 Swift 6.4 客户端，对齐 Python SDK 0.6.0 API，含 Linux
+- [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - 非官方零依赖 Swift 6 客户端，支持 Choice / Score / Noul、严格并发、可配置鉴权与重试，以及无网络测试
 
 ## 应用
 
