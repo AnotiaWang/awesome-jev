@@ -16,6 +16,7 @@ Please skip:
 
 - Closed-source products with no public write-up or demo.
 - Trivial “hello world” gists that only repeat the official quick start.
+- Walkthroughs, release roundups, or “what is Jev?” guides that restate the official docs without original measurement, code, or a new failure mode.
 - Marketing posts, waitlist spam, or content that does not mention Jev / TypeSafe System One.
 - Anything that is just a wrapper around someone else's already-listed project.
 
@@ -64,6 +65,7 @@ If you are not sure a project fits, open an issue first.
 
 - 没有公开说明或 demo 的闭源产品。
 - 只是复述官方 quick start 的 hello world。
+- 没有独立实测、代码或新失败模式的走读、发布综述、「Jev 是什么」指南。
 - 营销软文、候补名单广告，或完全不涉及 Jev / TypeSafe System One 的内容。
 - 只是给列表里已有项目再包一层的包装器。
 

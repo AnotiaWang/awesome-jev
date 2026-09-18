@@ -206,17 +206,12 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 
 ## 文章
 
-独立评测与报道。官方博文见 [官方资源](#官方资源)。
+独立实测、实验与报道。官方博文见 [官方资源](#官方资源)。
 
 - [Mini-Vibe Check: TypeSafe's Jev Judged Everything I’ve Written in 0.7 Seconds](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds) - Every 的 Mike Taylor 用 Jev 扫过自己的写作语料。
-- [AI That Doesn't Talk](https://ziplyne.agency/blog/ai-that-doesnt-talk-typesafe-jev-guide) - 实践指南：Playground、Python/JS SDK、裸 HTTP、agent skill。
-- [TypeSafe Jev: the First Decision-Only Model Class](https://www.developersdigest.tech/blog/typesafe-jev-system-one-models-release-guide-2026) - 发布周技术综述：API、评测、adapter、skill。
-- [He Says He Co-Invented ChatGPT. His New AI, Jev, Won't Write a Word](https://dev.to/gabrielanhaia/he-says-he-co-invented-chatgpt-his-new-ai-jev-wont-write-a-word-e3c) - Vercel AI SDK `experimental_evaluate` provider 的走读。
-- [What Is Jev?](https://mohammedshehu.com/jev-typesafe-ai/) - 短文入门，带 Python 工单分流示例。
 - [TypeSafe AI debuts model for machines that plays Doom](https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711) - 发布新闻报道。
-- [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - 日文走读：Jev 是什么、不是什么。
+- [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - 用 Gemma 的 logit 并行复现 JSON 捷径，并在公开 Mario harness 上对比 Jev 与 LLM。
 - [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - Jev 对打五子棋，带源码和耗时日志。
-- [Typed Decisions, Not Chat](https://warmersun.com/jev/) - 独立走读：把 TypeSafe 公开主张和公开证据分开。
 - [Jev: one judge call, or twelve dimension scores? I measured both on three tasks](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) - 独立实测：三个分类任务上，每行一次直接提问 vs 12–14 个 Jev 维度加本地拟合权重，附 token 成本、置信区间与误报率。
 
 ## 相关
