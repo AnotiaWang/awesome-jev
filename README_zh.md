@@ -80,6 +80,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [PHP SDK](https://github.com/Butochnikov/typesafe-sdk-php) - 非官方 PHP 客户端：类型化 DTO、Promise 与异常。下面的 Laravel 包基于它。
 - [Laravel TypeSafe Jev](https://github.com/Butochnikov/laravel-typesafe-jev) - 非官方 Laravel 12/13 集成：配置、Facade、scoped DI，以及基于 PHP SDK 的 recording fake。
 - [jev-go](https://github.com/Gaurav-Gosain/jev-go) - 非官方 Go 客户端，返回类型化判断与校准概率。`go get github.com/Gaurav-Gosain/jev-go`。
+- [Stumble/jev-go](https://github.com/Stumble/jev-go) - 非官方零依赖 Go SDK，支持 TypeSafe 直连和 Vercel AI Gateway，并提供类型化问题、重试、交互式 CLI 和可安装的 agent skill
 - [jevclient](https://github.com/AboveColin/jevclient) - 非官方异步 Python 客户端（`pip install jevclient`）。带 Noul / Choice / Score helper，与官方 `typesafe-sdk` 不是同一个包。
 
 ## 应用

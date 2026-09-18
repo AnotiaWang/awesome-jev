@@ -80,6 +80,7 @@ Official first, then community clients. Community packages are not affiliated wi
 - [PHP SDK](https://github.com/Butochnikov/typesafe-sdk-php) - Unofficial PHP client: typed DTOs, promises, and exceptions. Used by the Laravel package below.
 - [Laravel TypeSafe Jev](https://github.com/Butochnikov/laravel-typesafe-jev) - Unofficial Laravel 12/13 integration: config, facade, scoped DI, and a recording fake on the PHP SDK.
 - [jev-go](https://github.com/Gaurav-Gosain/jev-go) - Unofficial Go client for typed judgments and calibrated probabilities. `go get github.com/Gaurav-Gosain/jev-go`.
+- [Stumble/jev-go](https://github.com/Stumble/jev-go) - Unofficial dependency-free Go SDK for TypeSafe direct and Vercel AI Gateway, with typed questions, retries, an interactive CLI, and an installable agent skill
 - [jevclient](https://github.com/AboveColin/jevclient) - Unofficial async Python client (`pip install jevclient`). Typed Noul / Choice / Score helpers, separate from the official `typesafe-sdk`.
 
 ## Applications
