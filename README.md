@@ -170,6 +170,7 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [jev-agent-failure-benchmark](https://github.com/TokenTrim/jev-agent-failure-benchmark) - Who&When Pro (injected agent failures): Jev vs a strong LLM on who / which step / error category.
 - [jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) - Blind prompt-injection and vulnerable-code detection benches on public corpora, built on jev-go.
 - [Jev DSPy Lab](https://github.com/jmanhype/jev-dspy-lab) - Unofficial DSPy companion that records and replays TypeSafe calls while measuring calibration, selective risk, confidence-gated abstention, latency, tokens, and modeled cost.
+- [jevcal](https://github.com/abhixhek/jevcal) - Unofficial CLI that fits a per-question confidence threshold to a target accuracy on your own labeled data, verifies it on a held-out split, shows how much traffic still needs an LLM fallback, and fails CI when a Jev update breaks the locked thresholds
 
 ## Cookbooks
 
