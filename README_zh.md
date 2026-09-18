@@ -106,7 +106,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [neo4jev](https://github.com/jexp/neo4jev) - Neo4j 图导航：每个节点上由 Jev 选择跟哪条关系走，并对 log 概率做 beam search
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - 实验性 Hono 路由器：用自然语言描述路由，由 Jev 匹配进来的请求
 - [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C 扩展：把 `jev_noul` / `jev_choice` / `jev_score` 做成 SQL 函数，只依赖 libcurl
-- [jevql](https://github.com/kylemclaren/jevql) - 非官方类 psql 命令行工具与 Go/TS/Python SDK：无需扩展即可在原生 Postgres 中使用 `jev()` / `jev_prob` / `jev_choice` / `jev_score`，SQL 在服务端执行，剩余行由 Jev 批量判断并本地缓存
+- [jevql](https://github.com/kylemclaren/jevql) - 非官方类 psql 命令行工具与 Go/TS/Python SDK：无需扩展即可在原生 Postgres 中使用 `jev()` / `jev_prob` / `jev_choice` / `jev_score`，SQL 在服务端执行，剩余行由 Jev 批量判断，结果会缓存
 - [jev-resilience](https://github.com/Vicente-MD/jev-resilience) - 非官方 Spring WebFlux starter：语义熔断器，用 Jev 抓 HTTP 200 里的静默失败
 - [tripwire](https://github.com/noelzappy/tripwire) - 非官方 AI SDK middleware 与 OpenAI 兼容代理：约 100 ms 内对每条 LLM 回复做七项 Jev 检查，按置信度门控
 - [ProgressGate](https://github.com/AshutoshVJTI/progressgate) - 检测 Agent 循环里的语义停滞：Jev 评判轨迹，代码返回 CONTINUE / WARN / REPLAN / HALT
