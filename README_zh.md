@@ -168,6 +168,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [pi-warden](https://github.com/DevMortimer/pi-warden) - 基于 pi-typesafe 的 Pi 护栏：把判决当成 held tool result 而不是对话框；对照项目规则文件检查写入。
 - [pi-jev-auto-mode](https://github.com/jomatsu/pi-jev-auto-mode) - Pi 自动模式：Jev 按语义批准 `bash` / `write` / `edit`，判断不了就拒绝。
 - [Bicameral](https://github.com/AbdelStark/bicameral) - Pi 编程 harness：LLM 写代码，Jev 提供策略、循环检测和 review 的类型化反射。明确不是沙箱。
+- [jev-pref](https://github.com/doeixd/jev-pref) - 把 AGENTS.md 里的偏好变成 Jev 驱动的 AI linter：在 `jev-pref.json` 定义项目语义审查规则，对 diff hunk、暂存文件或 PR 求值，并把结果反馈给编程 Agent。`npx jev-pref setup`。
 - [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill：Agent 需要有界决策时去问 Jev。
 - [jev-system-architect](https://github.com/samtay32/jev-system-architect) - 专门找脆弱语义逻辑、改写成 Choice / Score / Noul 边界的 skill。
 - [augustus](https://github.com/24601/Augustus) - 设计判断 skill：把 Choice/Score/Noul 映射到决策理论、重排序、路由等经典方法，并给出组合代数、问题设计诊断和可证伪的验证门
