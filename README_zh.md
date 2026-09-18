@@ -87,6 +87,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 把 Jev 放进真实循环里的开源产品与 demo。
 
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - [Browser Use](https://github.com/browser-use) 的浏览器 Agent。一次请求里由 Jev 选出操作和 DOM 元素；只有 `TYPE_TEXT` 才让小模型写字。Google Flights 苏黎世 → 伦敦约 7 秒。含库、本地 inspector 与测时。
+- [jev-ego](https://github.com/romaluev/jev-ego) - [ego lite](https://lite.ego.app/) 上的浏览器 Agent：一次 TypeSafe 请求选出操作和编号元素；面向 Agent 的 observe/act/suggest/step CLI
 - [jev-browser](https://github.com/Ying-Kai-Liao/jev-browser) - 非官方浏览器自动化：LLM 规划目标，Jev 在 Playwright 快照上决定每次点击/输入（约 300 ms/次）。提供库、CLI 与 MCP 服务（`npx -y -p jev-browser jev-browser-mcp`）。
 - [Jev Browser（Vlad Terin）](https://github.com/vlad-terin/jev-browser) - Agent skill + 运行时：Codex 规划，Jev 选元素，runner 执行并逐步校验。
 - [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - macOS computer-use：OCR 屏幕，Jev 分类下一步动作再点击。约 $0.0002/步。
@@ -149,6 +150,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill：Agent 需要有界决策时去问 Jev。
 - [jev-system-architect](https://github.com/samtay32/jev-system-architect) - 专门找脆弱语义逻辑、改写成 Choice / Score / Noul 边界的 skill。
 - [jev-browser MCP](https://github.com/Ying-Kai-Liao/jev-browser) - 同上项目；MCP 工具 `browser_do`、`browser_check`、`browser_choose`，Agent 不必读完整页面快照也能操作页面。
+- [jev-ego](https://github.com/romaluev/jev-ego) - 同上项目；在已打开的 ego lite TaskSpace 上 observe/act/suggest/step
 
 ## 研究与开源模型
 
