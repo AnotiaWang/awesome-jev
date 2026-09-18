@@ -95,6 +95,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Unclutter](https://github.com/kitze/unclutter) - Chrome / Firefox 扩展：Jev 标出页面上不重要的元素，本地按页面模板记住并在下次访问时藏起来。
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - 非官方 Home Assistant 集成：把关于实体状态的类型化提问变成传感器与自动化动作；可直接选取实体、设备或区域来构造 state，并附带用量、成本与每日 token 预算实体
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
+- [Jev Search](https://github.com/superagents-lab/jev-search) - 非官方网页搜索应用：用 Jev 的 Choice 和 Noul 判断选择来源、时间范围和候选查询词，再对 Search1API 返回的结果进行相关性排序
 - [Jev Review](https://github.com/devagrawal09/jev-review) - 分阶段代码审查工作流 + 本地 dashboard，由聚焦的 Jev 调用驱动。
 - [Foreman](https://github.com/thruwire/foreman) - 软件工厂循环：Codex 写实现，Jev 独立判断是否做完、测试够不够、要不要人来看。
 - [Jev Drone](https://github.com/RomanSlack/jev-drone) - MuJoCo 四旋翼：控制和安全留在代码里，Jev 做较慢的战术判断。
