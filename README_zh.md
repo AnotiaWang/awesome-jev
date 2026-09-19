@@ -119,6 +119,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Jev Drone](https://github.com/RomanSlack/jev-drone) - MuJoCo 四旋翼：控制和安全留在代码里，Jev 做较慢的战术判断。
 - [Jev Plays StarCraft](https://github.com/phyous/tsai-sc) - 原版星际争霸共享战役的结构化 state harness，带验证跑次和概率轨迹。
 - [Jev × Civilization II](https://github.com/phyous/tsai-civ2) - 浏览器里跑原版文明 II；Jev 选帝国、城市、科研和单位动作。实验性，尚未验证通关
+- [Jev Trade](https://github.com/aowang-ai/jev-trade) - Hyperliquid 实盘桌面：每个 tick 由 Jev 用 Choice 回答多空、开平或 hold、以及杠杆；下单和撤单由代码执行。默认 dry-run；配置私钥后会真下单。在线：[jev-trade.com](https://www.jev-trade.com/)。
 - [Jev Trader](https://github.com/jarrodwatts/jev-trader) - 每个 Monad 区块对 Kuru 的 MON-USDC 下一笔买卖。在线 demo：[jev-trader.vercel.app](https://jev-trader.vercel.app/)。
 - [Human Compiler](https://github.com/asfarsadewa/human-compiler) - 粘贴职场废话，Jev 打被动攻击 / 紧急感 / 信息密度，代码按 rustc 风格报诊断。在线：[human-compiler.asfarlab.fun](https://human-compiler.asfarlab.fun)。
 - [JEVMETER](https://github.com/ChetasLua/jevmeter) - 给任意视频挂上实时 Jev 仪表：逐句打分，导出 16:9 成片。演示：[Chetaslua](https://x.com/chetaslua/status/2100473581251748216)。
