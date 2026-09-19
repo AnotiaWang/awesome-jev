@@ -173,6 +173,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [augustus](https://github.com/24601/Augustus) - Design-judgment skill: maps Choice/Score/Noul onto classical methods (decision theory, rerank, routing) with a composition algebra, question-design diagnosis, and falsifying validation gates
 - [jev-browser MCP](https://github.com/Ying-Kai-Liao/jev-browser) - Same project as above; MCP tools `browser_do`, `browser_check`, `browser_choose` so an agent can drive the page without reading full snapshots.
 - [jev-ego](https://github.com/romaluev/jev-ego) - Same project; observe/act/suggest/step on a live ego lite TaskSpace
+- [jev-axi](https://github.com/shiftynick/jev-axi) - CLI plus Claude Code and Codex hooks: Jev scores each shell command for hazards before it runs and screens fetched text for prompt injection, with routine commands decided locally so nothing is sent
 
 ## Research & Open Models
 

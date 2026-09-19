@@ -173,6 +173,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [augustus](https://github.com/24601/Augustus) - 设计判断 skill：把 Choice/Score/Noul 映射到决策理论、重排序、路由等经典方法，并给出组合代数、问题设计诊断和可证伪的验证门
 - [jev-browser MCP](https://github.com/Ying-Kai-Liao/jev-browser) - 同上项目；MCP 工具 `browser_do`、`browser_check`、`browser_choose`，Agent 不必读完整页面快照也能操作页面。
 - [jev-ego](https://github.com/romaluev/jev-ego) - 同上项目；在已打开的 ego lite TaskSpace 上 observe/act/suggest/step
+- [jev-axi](https://github.com/shiftynick/jev-axi) - CLI 加 Claude Code、Codex hook：命令执行前先用 Jev 给危险性打分，并筛查抓取到的文本是否含提示注入，常规命令在本地判定、不发送任何内容
 
 ## 研究与开源模型
 
