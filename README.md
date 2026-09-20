@@ -108,6 +108,7 @@ Open-source products and demos that put Jev in a real loop.
 - [Every](https://github.com/sufianetaouil/every) - Semantic code-search CLI: a yes/no question against every function, ranked by Noul probability.
 - [blink](https://github.com/ellipsis-dev/blink) - Codebase search: an ensemble of walkers asks Jev which file answers a natural-language query
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Unofficial web search app using Jev's Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API
+- [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - Unofficial JSON-in/JSON-out CLI that uses Jev `Noul` judgments to rerank search results, filter documents without usable evidence, or extract query-specific passages
 - [neo4jev](https://github.com/jexp/neo4jev) - Neo4j graph navigation: at each node Jev chooses which relationship to follow, with beam search over log-probabilities
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Experimental Hono router: Jev matches an incoming request to a plain-language route description
 - [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C extension: `jev_noul` / `jev_choice` / `jev_score` as SQL functions via libcurl

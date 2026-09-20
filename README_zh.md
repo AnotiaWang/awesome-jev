@@ -108,6 +108,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
 - [blink](https://github.com/ellipsis-dev/blink) - 代码库搜索：一组 walker 并行走文件系统，由 Jev 判断哪个文件能回答自然语言查询
 - [Jev Search](https://github.com/superagents-lab/jev-search) - 非官方网页搜索应用：用 Jev 的 Choice 和 Noul 判断选择来源、时间范围和候选查询词，再对 Search1API 返回的结果进行相关性排序
+- [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - 非官方 JSON 输入/输出 CLI：使用 Jev 的 `Noul` 判断重排搜索结果、过滤不含可用证据的文档，或提取与查询相关的原文片段
 - [neo4jev](https://github.com/jexp/neo4jev) - Neo4j 图导航：每个节点上由 Jev 选择跟哪条关系走，并对 log 概率做 beam search
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - 实验性 Hono 路由器：用自然语言描述路由，由 Jev 匹配进来的请求
 - [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C 扩展：把 `jev_noul` / `jev_choice` / `jev_score` 做成 SQL 函数，只依赖 libcurl
