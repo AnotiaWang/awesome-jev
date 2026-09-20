@@ -168,6 +168,7 @@ Toys, live sites, and realtime agents. Most shipped in the first 48 hours after 
 
 Tools that expose Jev to coding agents and MCP clients.
 
+- [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - Decision layer for coding agents: deterministic rules before any model call, then one Jev request, as a Claude Code hook, an MCP server, a loopback service and a shared team policy. Ships the 300-call injection test behind its own numbers.
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - Official skill: primitives, patterns, and how to structure evaluations. Claude Code: `claude plugin marketplace add typesafe-ai/skills` then `claude plugin install typesafe@typesafe-ai`. Other agents: `npx skills add typesafe-ai/skills --skill typesafe-ai`.
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code plugin and npm library: Jev scores tool calls and drops stale ones instead of summarizing context
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI: Jev ranks which agent skill fits the next step from live session context, with Claude Code hooks
