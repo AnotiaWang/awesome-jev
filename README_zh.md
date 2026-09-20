@@ -192,6 +192,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Claude Code 的 Stop 钩子：先从对话记录里找证据，只有在文件改动且之后没有通过检查时才发起一次四问的 Jev 调用来核实"完成"，任何出错都放行。
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Git 预提交钩子：用一次 Jev 调用判断提交信息是否匹配暂存的改动，并检查调试残留、未提及的改动和凭据泄露，只有检测到凭据才会阻止提交。
 - [jev-use](https://github.com/shitianfang/jev-use) - Claude Code、Codex 和 pi 插件：把 Agent 循环里不需要输出文本的判断批量交给 Jev，需要写字或置信度不足的步骤按类型化契约退回 LLM
+- [slop-grader](https://github.com/lukstei/slop-grader) - 基于规则的命令行与 Agent skill：用 Jev 评分和行级标志检查文本的 AI 废话、语法和技术文档质量，并引导 AI Agent 自动修复违规
 
 ## 研究与开源模型
 
