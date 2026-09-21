@@ -98,7 +98,6 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Jev for Chrome](https://github.com/chy4pro/jev-for-chrome) - Jev Ultrafast 的非官方 Chrome 扩展（Manifest V3）移植：Jev 一次请求同时选出操作和 DOM 元素，只有打字时才调用小文本模型，直接跑在用户自己的标签页里（OpenRouter / TypeSafe / Cloudflare 三种渠道）；附 17 个任务的 headless Chromium 测试套件和完整轨迹（仓库 docs/ 目录，同一套任务多轮 13–14/17）。
 - [jev-ego](https://github.com/romaluev/jev-ego) - [ego lite](https://lite.ego.app/) 上的浏览器 Agent：一次 TypeSafe 请求选出操作和编号元素；面向 Agent 的 observe/act/suggest/step CLI
 - [jev-browser](https://github.com/Ying-Kai-Liao/jev-browser) - 非官方浏览器自动化：LLM 规划目标，Jev 在 Playwright 快照上决定每次点击/输入（约 300 ms/次）。提供库、CLI 与 MCP 服务（`npx -y -p jev-browser jev-browser-mcp`）。
-- [Jev Browser（Vlad Terin）](https://github.com/vlad-terin/jev-browser) - Agent skill + 运行时：Codex 规划，Jev 选元素，runner 执行并逐步校验。
 - [typesafe-computer-use](https://github.com/awlevin/typesafe-computer-use) - macOS computer-use：OCR 屏幕，Jev 分类下一步动作再点击。约 $0.0002/步。
 - [Yappy](https://yappy.biz/jev/) - macOS 语音 Agent（闭源，附公开测量数据）。在其托管方案上，Jev 每一步从窗口的无障碍控件表中选择操作与目标控件；只有输入文本时才调用聊天模型，置信度下降时交回完整 Agent。作者报告：每次决策 275–690 ms，五次共 $0.003。
 - [Mobile Jev](https://github.com/droidrun/mobile-jev) - [Mobilerun](https://mobilerun.ai) 上的 Android Agent：每次点击由 Jev 决定。打开 Uber，旧金山机场 → 金门大桥，约 21 秒 / 9 步到支付页。含实时 studio、CLI 与 traces。不需要 ADB。
@@ -108,6 +107,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
 - [blink](https://github.com/ellipsis-dev/blink) - 代码库搜索：一组 walker 并行走文件系统，由 Jev 判断哪个文件能回答自然语言查询
 - [Jev Search](https://github.com/superagents-lab/jev-search) - 非官方网页搜索应用：用 Jev 的 Choice 和 Noul 判断选择来源、时间范围和候选查询词，再对 Search1API 返回的结果进行相关性排序
+- [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - 非官方 JSON 输入/输出 CLI：使用 Jev 的 `Noul` 判断重排搜索结果、过滤不含可用证据的文档，或提取与查询相关的原文片段
 - [neo4jev](https://github.com/jexp/neo4jev) - Neo4j 图导航：每个节点上由 Jev 选择跟哪条关系走，并对 log 概率做 beam search
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - 实验性 Hono 路由器：用自然语言描述路由，由 Jev 匹配进来的请求
 - [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C 扩展：把 `jev_noul` / `jev_choice` / `jev_score` 做成 SQL 函数，只依赖 libcurl
@@ -162,7 +162,10 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - 基于 PyBoy 的精灵宝可梦红版：路线和数值运算都由代码掌控，Jev 只在分支点做选择，每回合战斗都会记录一次用 Brier 分数对照 RAM 状态检验的濒死预测。
 - [jev-canvas](https://github.com/gaborishka/jev-canvas) - 用语音和摄像头追踪的手指在 tldraw 画布上绘图；Jev 在每段实时转写上决定动作、目标和位置。支持英语和乌克兰语指令。
 - [sudoku-vs-jev](https://github.com/zebedelu/sudoku-vs-jev) - 终端数独：Python 掌握规则，Jev 每回合选择一步，在存在必走步时表现稳健，一旦需要猜测则表现不稳。
+- [chess-vs-jev](https://github.com/zebedelu/chess-vs-jev) - Pygame 国际象棋：python-chess 掌握规则，Jev 每回合选择一个合法走法，支持人 vs 人、人 vs Jev 和 Jev vs Jev。
 - [JevsBistro](https://github.com/andrewsilber/JevsBistro) - 确定性的 3D 餐厅模拟：重放同一场晚餐服务，对比规则驱动、摄像头辅助和由 Jev 规划的服务员，并记录每次决策的状态、选项、置信度和延迟。
+- [jev-asks-until-sure](https://github.com/mintannn/jev-asks-until-sure) - 用置信度决定还要问几题的二十问游戏：Jev 会断言、含糊其辞，或者干脆拒绝作答，界面同步播报每一次判定。在线：[jev.mintan.org](https://jev.mintan.org)。
+- [Jev × 2048](https://jev-2048-ultra.vercel.app) - 一个把 Jev 当作 2048 决策引擎的网页实验台，展示每一步的概率分布、置信度、延迟与 token 消耗，观察上下文设计如何影响决策模型。
 
 ## Agent 工具
 
@@ -192,6 +195,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Claude Code 的 Stop 钩子：先从对话记录里找证据，只有在文件改动且之后没有通过检查时才发起一次四问的 Jev 调用来核实"完成"，任何出错都放行。
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Git 预提交钩子：用一次 Jev 调用判断提交信息是否匹配暂存的改动，并检查调试残留、未提及的改动和凭据泄露，只有检测到凭据才会阻止提交。
 - [jev-use](https://github.com/shitianfang/jev-use) - Claude Code、Codex 和 pi 插件：把 Agent 循环里不需要输出文本的判断批量交给 Jev，需要写字或置信度不足的步骤按类型化契约退回 LLM
+- [dsh-jev-tools](https://github.com/HorusJiang/dsh-jev-tools) - DeepSeek Harness 插件：用 Jev 精简超长工具输出、筛查抓取页面里的注入指令、挑选下一步该用的 skill，并提供 jev_ask 与 jev_gate 两个工具
 
 ## 研究与开源模型
 
@@ -209,6 +213,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) - 同一套 System One 问题，对比 Jev 与 Cerebras 上的 Qwen 3.8 27B。视频：[Shannon](https://x.com/iamMrDuncan/status/2100467548298899918)。
 - [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) - 重排序对比：原始 provider 响应、打分代码、不确定区间、写明的局限。
 - [Jev Spam Eval](https://github.com/bitnovus/jev-spam-eval) - 探索性零样本垃圾邮件研究，对照训练过的 TF-IDF 基线，并写了事后调参的 caveat。
+- [**Jev × NASA Kepler**](https://gist.github.com/ipaulsmith/e5c3ae3a492a455435d5bfc161404312) - 对 8,054 个历史 Kepler 关注目标（Kepler Objects of Interest）进行的独立回顾性 Jev 1.13 测试；预测期间隐藏 NASA 系外行星档案库分类，档案分类匹配率为 72.5%，固定三规则基线为 64.4%，并公开了完整请求、指标、基线和局限说明
 - [Jev Phishing Bench](https://github.com/anisselbd/jev-phishing-bench) - 2000 封邮件：Jev 对 Claude Haiku 4.5 做点不点链接，带校准、延迟和成本。这里准确率是 Haiku 更高。
 - [jev-agent-failure-benchmark](https://github.com/TokenTrim/jev-agent-failure-benchmark) - Who&When Pro（注入的 Agent 故障）：Jev 对强 LLM，预测是谁 / 哪一步 / 哪类错误。
 - [jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) - 公开语料上的盲测：提示注入和漏洞代码检测，基于 jev-go。
