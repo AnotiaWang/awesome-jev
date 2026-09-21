@@ -171,6 +171,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [jev-use](https://github.com/shitianfang/jev-use) - Claude Code, Codex and pi plugin: Jev answers the batched typed questions an agent loop needs, and a typed escalation contract hands writing and low-confidence steps back to the LLM
 - [dsh-jev-tools](https://github.com/HorusJiang/dsh-jev-tools) - DeepSeek Harness plugin: Jev prunes oversized tool output, screens fetched pages for injected instructions, and picks which skill fits the next step, plus the jev_ask and jev_gate tools
 - [slop-grader](https://github.com/lukstei/slop-grader) - Rule-based CLI and agent skill that grades text against custom rulesets for AI slop, grammar, and technical documentation quality, and guides an AI agent to auto-fix violations
+- [pytest-jev](https://github.com/allebee/pytest-jev) - pytest plugin for semantic assertions on LLM output: each plain-English claim about a reply becomes a Jev Noul in one request, a claim passes at p ≥ 0.8, and failures print every claim's probability; `choice` and `score` cover routing and rubric checks
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Semantic grep for code, git diffs and CSV rows: one Noul per 5-60 line chunk, 16 chunks per Jev request, grep-style file:line output and exit codes for CI lint rules written in English
 
 ## Research & Open Models
