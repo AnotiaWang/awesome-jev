@@ -153,6 +153,7 @@ Toys, live sites, and realtime agents. Most shipped in the first 48 hours after 
 - [jev-t-rex-runner](https://github.com/joshlarsen/jev-t-rex-runner) - Chrome dinosaur game played by Jev.
 - [snake-jev](https://github.com/siroccomask/snake-jev) - Snake: hundreds of typed direction decisions per run.
 - [Jev Guard](https://guard-jev.vercel.app) - Comment-moderation playground.
+- [jev-fit](https://jev-fit.com) - Paste a software idea; Jev answers a fixed typed rubric in one call and the page says plain code, Jev, or a reasoning LLM, with probabilities. Unofficial, closed source, free page and API.
 - [Hollow Creek](https://hollow-creek-sigma.vercel.app) - Village NPCs that *judge* you each tick (what to do, how they feel) instead of chatting.
 - [Jev mood demo](https://jev-demo.vercel.app) - Talk nicely or nastily over time; structured state tracks mood.
 - [Jev Room](https://jev-room.moe136231.chatgpt.site) - One sentence → six room settings. Jev chooses, the app renders.

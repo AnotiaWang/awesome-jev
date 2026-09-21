@@ -153,6 +153,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-t-rex-runner](https://github.com/joshlarsen/jev-t-rex-runner) - Chrome 小恐龙由 Jev 来跳。
 - [snake-jev](https://github.com/siroccomask/snake-jev) - 贪吃蛇：每局几百次类型化转向决策。
 - [Jev Guard](https://guard-jev.vercel.app) - 评论审核 playground。
+- [jev-fit](https://jev-fit.com) - 粘贴一个软件想法；Jev 在一次调用中回答一套固定的类型化问题，页面给出结论：普通代码、Jev 或推理型 LLM，并附概率。非官方，闭源，页面和 API 免费。
 - [Hollow Creek](https://hollow-creek-sigma.vercel.app) - 村庄 NPC 每个 tick *评判*你（做什么、对你什么感觉），而不是聊天。
 - [Jev mood demo](https://jev-demo.vercel.app) - 长时间对它好或坏，结构化 state 跟踪心情。
 - [Jev Room](https://jev-room.moe136231.chatgpt.site) - 一句话 → 六个房间设定。Jev 选，应用渲染。
