@@ -197,6 +197,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Git 预提交钩子：用一次 Jev 调用判断提交信息是否匹配暂存的改动，并检查调试残留、未提及的改动和凭据泄露，只有检测到凭据才会阻止提交。
 - [jev-use](https://github.com/shitianfang/jev-use) - Claude Code、Codex 和 pi 插件：把 Agent 循环里不需要输出文本的判断批量交给 Jev，需要写字或置信度不足的步骤按类型化契约退回 LLM
 - [dsh-jev-tools](https://github.com/HorusJiang/dsh-jev-tools) - DeepSeek Harness 插件：用 Jev 精简超长工具输出、筛查抓取页面里的注入指令、挑选下一步该用的 skill，并提供 jev_ask 与 jev_gate 两个工具
+- [slop-grader](https://github.com/lukstei/slop-grader) - 基于规则的命令行与 Agent skill：按自定义规则集（custom rulesets）用 Jev 评分和行级标志检查文本的 AI 废话、语法和技术文档质量，并引导 AI Agent 自动修复违规
 
 ## 研究与开源模型
 

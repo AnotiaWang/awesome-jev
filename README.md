@@ -197,6 +197,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Pre-commit hook where one Jev call judges whether the commit message matches the staged diff, flags debug leftovers and unmentioned work, and blocks only when it detects a credential.
 - [jev-use](https://github.com/shitianfang/jev-use) - Claude Code, Codex and pi plugin: Jev answers the batched typed questions an agent loop needs, and a typed escalation contract hands writing and low-confidence steps back to the LLM
 - [dsh-jev-tools](https://github.com/HorusJiang/dsh-jev-tools) - DeepSeek Harness plugin: Jev prunes oversized tool output, screens fetched pages for injected instructions, and picks which skill fits the next step, plus the jev_ask and jev_gate tools
+- [slop-grader](https://github.com/lukstei/slop-grader) - Rule-based CLI and agent skill that grades text against custom rulesets for AI slop, grammar, and technical documentation quality, and guides an AI agent to auto-fix violations
 
 ## Research & Open Models
 
