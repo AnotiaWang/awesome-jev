@@ -210,6 +210,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) - 同一套 System One 问题，对比 Jev 与 Cerebras 上的 Qwen 3.8 27B。视频：[Shannon](https://x.com/iamMrDuncan/status/2100467548298899918)。
 - [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) - 重排序对比：原始 provider 响应、打分代码、不确定区间、写明的局限。
 - [Jev Spam Eval](https://github.com/bitnovus/jev-spam-eval) - 探索性零样本垃圾邮件研究，对照训练过的 TF-IDF 基线，并写了事后调参的 caveat。
+- [**Jev × NASA Kepler**](https://gist.github.com/ipaulsmith/e5c3ae3a492a455435d5bfc161404312) - 对 8,054 个历史 Kepler 关注目标（Kepler Objects of Interest）进行的独立回顾性 Jev 1.13 测试；预测期间隐藏 NASA 系外行星档案库分类，档案分类匹配率为 72.5%，固定三规则基线为 64.4%，并公开了完整请求、指标、基线和局限说明
 - [Jev Phishing Bench](https://github.com/anisselbd/jev-phishing-bench) - 2000 封邮件：Jev 对 Claude Haiku 4.5 做点不点链接，带校准、延迟和成本。这里准确率是 Haiku 更高。
 - [jev-agent-failure-benchmark](https://github.com/TokenTrim/jev-agent-failure-benchmark) - Who&When Pro（注入的 Agent 故障）：Jev 对强 LLM，预测是谁 / 哪一步 / 哪类错误。
 - [jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) - 公开语料上的盲测：提示注入和漏洞代码检测，基于 jev-go。
