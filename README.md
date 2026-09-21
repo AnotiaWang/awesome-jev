@@ -1,16 +1,13 @@
 # Awesome Jev [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of applications, libraries, tools, and resources for [Jev](https://docs.typesafe.ai/introduction), TypeSafe's flagship [System One](https://docs.typesafe.ai/concepts/system-one) model.
+A curated list of applications, libraries, tools, and research built with [Jev](https://docs.typesafe.ai/introduction).
 
 **[English](README.md)** | **[简体中文](README_zh.md)**
 
-> Send state and typed questions; get structured answers your code can use directly.
-
-Jev launched in early access on 15 September 2026. This list is unofficial and not affiliated with [TypeSafe AI](https://typesafe.ai). Pull requests are welcome — the ecosystem is young and growing fast.
+Unofficial, not affiliated with [TypeSafe AI](https://typesafe.ai). Public access opened 21 September 2026 — keys from the [console](https://console.typesafe.ai/settings/keys). Pull requests welcome.
 
 ## Contents
 
-- [What is Jev?](#what-is-jev)
 - [Official](#official)
 - [Community](#community)
 - [SDKs & Clients](#sdks--clients)
@@ -18,45 +15,23 @@ Jev launched in early access on 15 September 2026. This list is unofficial and n
 - [Demos & Games](#demos--games)
 - [Agent Tools](#agent-tools)
 - [Research & Open Models](#research--open-models)
-- [Cookbooks](#cookbooks)
-- [Patterns](#patterns)
 - [Articles](#articles)
 - [Contribute](#contribute)
 
-## What is Jev?
-
-Large language models generate text. Jev does not. It evaluates typed *questions* against a *state* and returns values your code can branch on, sort by, and route with — plus calibrated probabilities and confidence.
-
-| Question | Goal | Returns |
-| --- | --- | --- |
-| [Choice](https://docs.typesafe.ai/primitives/choice) | Pick one option from a list | `choice`, `probabilities`, `confidence` |
-| [Score](https://docs.typesafe.ai/primitives/score) | Rate the state on a rubric | `score`, `probabilities`, `confidence` |
-| [Noul](https://docs.typesafe.ai/primitives/noul) | Is this statement true? | `noul` (0–1) |
-
-Questions in one request run in parallel against the same state. Atomic questions, composed in code.
-
 ## Official
 
-- [TypeSafe](https://typesafe.ai) - Company homepage, waitlist, and product overview.
-- [Documentation](https://docs.typesafe.ai/introduction) - Introduction, primitives, patterns, API, and SDKs. Start with the [quick start](https://docs.typesafe.ai/introduction/quickstart).
-- [Playground](https://console.typesafe.ai/playground) - Paste a state, add questions, see typed answers in the browser.
-- [API keys](https://console.typesafe.ai/settings/keys) - Dashboard for TypeSafe API keys (`TYPESAFE_API_KEY`).
-- [HTTP API](https://docs.typesafe.ai/api) - `POST https://api.typesafe.ai/v1/systemone`.
-- [Workflow evals](https://evals.typesafe.ai) - Published eval methodology and per-model results.
-- [GitHub org](https://github.com/typesafe-ai) - Official open-source repositories.
-- [Agent skill](https://docs.typesafe.ai/agent-skill) - Drop-in skill for Claude Code, Codex, and other coding agents ([`typesafe-ai/skills`](https://github.com/typesafe-ai/skills)).
-- [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - Known failure modes of the current public model.
-- [Introducing System One Models and Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) - Launch post: architecture, pricing, Doom and Wikiracing demos, FAQ.
-- [Jev on Vercel AI Gateway](https://vercel.com/ai-gateway/models/jev) - Hosted `typesafe-ai/jev` for AI SDK `evaluate`, no TypeSafe waitlist required.
-- [Manifesto](https://typesafe.ai/manifesto) - Case for machine-native intelligence built for software, not conversation.
-- [The Bitterest Lesson](https://typesafe.ai/blog/bitterest-lesson) - Why optimizing the wrong task can dominate gains from scale.
-- [AI: too good to be true, too bad to be useful](https://typesafe.ai/blog/ai-too-good-to-be-true-too-bad-to-be-useful-typesafe-ai) - Argument against preference-optimized chat models for automation.
+- [Documentation](https://docs.typesafe.ai/introduction) - API, SDKs, [cookbooks](https://docs.typesafe.ai/llms.txt), and [patterns](https://docs.typesafe.ai/patterns)
+- [Playground](https://console.typesafe.ai/playground)
+- [Console](https://console.typesafe.ai) - Keys and usage
+- [GitHub](https://github.com/typesafe-ai)
+- [Workflow evals](https://evals.typesafe.ai)
+- [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - Known failure modes
+- [Vercel AI Gateway](https://vercel.com/ai-gateway/models/jev) - Hosted `typesafe-ai/jev`
 
 ## Community
 
-- [Discord](https://discord.gg/typesafe) - Official TypeSafe server. Builder demos live in [Show and Tell](https://discord.com/channels/1483217544214085663/1483217545040232493).
-- [X @typesafeai](https://x.com/typesafeai) - Product and research updates.
-- [LinkedIn](https://www.linkedin.com/company/typesafe-ai/) - Company announcements and hiring.
+- [Discord](https://discord.gg/typesafe) - Builder demos in [Show and Tell](https://discord.com/channels/1483217544214085663/1483217545040232493)
+- [X @typesafeai](https://x.com/typesafeai)
 
 ## SDKs & Clients
 
@@ -93,7 +68,6 @@ Open-source products and demos that put Jev in a real loop.
 
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser agent from [Browser Use](https://github.com/browser-use). Jev picks an operation and a DOM element in one request; a small LLM writes text only for `TYPE_TEXT`. Zürich → London on Google Flights in ~7s. Library, local inspector, and measurements included.
 - [Jev Web Analyzer](https://github.com/replynodes/jev-web-analyzer) - Community project that analyzes a public SaaS landing page as clean Markdown and asks Jev ten bounded `Choice` questions about first-visit understanding, including the first change to make.
-- [JevBrowserExt](https://github.com/chy4pro/JevBrowserExt) - Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in the user's own tabs through OpenRouter, TypeSafe or Cloudflare; includes a 17-task headless-Chromium suite with recorded traces.
 - [jev-align (Sutro)](https://github.com/sutro-sh/jev-align) - Unofficial active-learning CLI that evaluates CSV, Parquet, and JSONL rows with Jev, asks people to label uncertain and audit samples, and uses GEPA to propose improved definitions
 - [Jev for Chrome](https://github.com/chy4pro/jev-for-chrome) - Unofficial Chrome extension (Manifest V3) port of Jev Ultrafast: Jev picks the operation and DOM element in one request, a small text model writes typed values, and it runs in the user's own tabs through OpenRouter, TypeSafe or Cloudflare; includes a 17-task headless-Chromium suite with recorded traces.
 - [jev-ego](https://github.com/romaluev/jev-ego) - Browser agent on [ego lite](https://lite.ego.app/): one TypeSafe request picks operation + indexed element; agent-facing observe/act/suggest/step CLI
@@ -136,13 +110,13 @@ Open-source products and demos that put Jev in a real loop.
 - [commit-miner](https://github.com/devanshbatham/commit-miner) - Rust CLI that classifies commit diffs with Jev: bug fixes, security/CWEs, and change types. HTML/CSV reports.
 - [jev-eval-agent](https://github.com/vinilana/jev-eval-agent) - Public eval harness for early Jev tests.
 - [Jev Logs](https://github.com/reachjalil/jevlogs) - OpenTelemetry log triage: Jev scores diagnostic value and priority before an expensive LLM looks at the archive.
-- [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - Official interactive demo of [speculative fan-out](https://docs.typesafe.ai/patterns/fan-out): many questions in one call, code keeps the relevant answers, LLM only for splits and chit-chat. Source is slated for GitHub at release.
+- [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - Official interactive demo of [speculative fan-out](https://docs.typesafe.ai/patterns/fan-out)
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in the quickfix window.
 - [jev-skip](https://github.com/valentynkit/jev-skip) - Browser extension that reads the YouTube caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowd database, reporting catching 77% of SponsorBlock's sponsor seconds across 23 videos at $0.0008 a video.
 
 ## Demos & Games
 
-Toys, live sites, and realtime agents. Most shipped in the first 48 hours after launch.
+Toys, live sites, and realtime agents.
 
 - [Yes / No](https://yesno.coderai.dev) - Free no-signup Noul demo. Ask a question, get yes / no / maybe, with web search when needed.
 - [Jev Tetris](https://jev-omega.vercel.app) - Jev picks rotation and column from holes, stack height, and bumpiness.
@@ -190,8 +164,6 @@ Tools that expose Jev to coding agents and MCP clients.
 - [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill: ask Jev whenever the agent needs a bounded decision.
 - [jev-system-architect](https://github.com/samtay32/jev-system-architect) - Skill that hunts for brittle semantic logic and turns it into Choice / Score / Noul boundaries.
 - [augustus](https://github.com/24601/Augustus) - Design-judgment skill: maps Choice/Score/Noul onto classical methods (decision theory, rerank, routing) with a composition algebra, question-design diagnosis, and falsifying validation gates
-- [jev-browser MCP](https://github.com/Ying-Kai-Liao/jev-browser) - Same project as above; MCP tools `browser_do`, `browser_check`, `browser_choose` so an agent can drive the page without reading full snapshots.
-- [jev-ego](https://github.com/romaluev/jev-ego) - Same project; observe/act/suggest/step on a live ego lite TaskSpace
 - [jev-axi](https://github.com/shiftynick/jev-axi) - CLI plus Claude Code and Codex hooks: Jev scores each shell command for hazards before it runs and screens fetched text for prompt injection, with routine commands decided locally so nothing is sent
 - [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - Decision layer for coding agents: deterministic rules before any model call, then one Jev request, as a Claude Code hook, an MCP server, a loopback service and a shared team policy. Ships the 300-call injection test behind its own numbers.
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Claude Code Stop hook that checks the transcript for evidence before trusting a "done" claim, spending one four-question Jev call only when files changed with no passing check since, and failing open on every error path.
@@ -216,7 +188,7 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [typesafe-ai-benchmark](https://github.com/iammrduncan/typesafe-ai-benchmark) - Side-by-side of Jev vs Qwen 3.8 27B on Cerebras for the same System One questions. Video: [Shannon](https://x.com/iamMrDuncan/status/2100467548298899918).
 - [Jev Rerank Bench](https://github.com/anessbelbati/jev-rerank-bench) - Reranking comparison with raw provider responses, scoring code, uncertainty intervals, and documented limits.
 - [Jev Spam Eval](https://github.com/bitnovus/jev-spam-eval) - Exploratory zero-shot spam study vs trained TF-IDF baselines, with post-hoc-tuning caveats.
-- [**Jev × NASA Kepler**](https://gist.github.com/ipaulsmith/e5c3ae3a492a455435d5bfc161404312) - Independent retrospective test of Jev 1.13 on 8,054 historical Kepler Objects of Interest with NASA Exoplanet Archive dispositions hidden during prediction; 72.5% archive-disposition match vs 64.4% for a fixed 3-rule baseline, with exact requests, metrics, baseline, and caveats
+- [Jev × NASA Kepler](https://gist.github.com/ipaulsmith/e5c3ae3a492a455435d5bfc161404312) - Independent retrospective test of Jev 1.13 on 8,054 historical Kepler Objects of Interest with NASA Exoplanet Archive dispositions hidden during prediction; 72.5% archive-disposition match vs 64.4% for a fixed 3-rule baseline, with exact requests, metrics, baseline, and caveats
 - [Jev Phishing Bench](https://github.com/anisselbd/jev-phishing-bench) - 2,000 emails: Jev vs Claude Haiku 4.5 on click-or-not, with calibration, latency, and cost. Haiku wins accuracy here.
 - [jev-agent-failure-benchmark](https://github.com/TokenTrim/jev-agent-failure-benchmark) - Who&When Pro (injected agent failures): Jev vs a strong LLM on who / which step / error category.
 - [jev-sec-bench](https://github.com/Gaurav-Gosain/jev-sec-bench) - Blind prompt-injection and vulnerable-code detection benches on public corpora, built on jev-go.
@@ -226,47 +198,12 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [Jev search rerank eval](https://github.com/zhuyansen/jev-search-rerank-eval) - 9,831 labelled pairs: Jev rerank vs BM25 / bge-m3, with judge-circularity measured. Fusion wins; Jev alone does not beat embeddings
 - [Smoking-history extraction benchmark](https://github.com/vclic/smoking-extraction-benchmark) - 1,000 synthetic notes: Jev vs OpenAI structured outputs on accuracy, cost, and latency
 
-## Cookbooks
-
-Official, copy-pasteable workflows. Full index: [console cookbooks](https://console.typesafe.ai/docs/cookbooks) and [docs index](https://docs.typesafe.ai/llms.txt).
-
-- [Parallel questions](https://docs.typesafe.ai/cookbooks/parallel_questions) - Batch many questions over one state; one call instead of N.
-- [Line-by-line search](https://docs.typesafe.ai/cookbooks/semantic_find) - Score hundreds of line ids against a query with Choice + a Noul “does an answer exist?” check.
-- [Re-ranking](https://docs.typesafe.ai/cookbooks/rerank_typesafe) - BM25 shortlist, then one TypeSafe question per query–candidate pair.
-- [Guardrails for LLMs](https://docs.typesafe.ai/cookbooks/llm_guardrails) - Screen messages in and out of an LLM; threshold probabilities in code.
-- [Double-checking citations](https://docs.typesafe.ai/cookbooks/citation_check) - Choice over whether a quote’s context supports the claim; confidence gates human review.
-- [Classifying RAG passages](https://docs.typesafe.ai/cookbooks/classifying_rag_passages) - Keep, flag, or drop retrieved passages (contradiction, prompt injection) before the answering model.
-- [Function calling](https://docs.typesafe.ai/cookbooks/function_calling) - Map natural-language requests onto ordinary typed functions with closed-set arguments.
-- [Skill suggestion](https://docs.typesafe.ai/cookbooks/skill_suggestion) - Rank an agent skill catalog, then read only the top few.
-- [Hierarchical classification](https://docs.typesafe.ai/cookbooks/hierarchical_classification) - Beam search over deep taxonomies with Choice probabilities.
-- [SDE cascade](https://docs.typesafe.ai/cookbooks/sde_cascade) - Two-stage structured-data-extraction cascade (mini → verify → reasoning).
-- [Date extraction](https://docs.typesafe.ai/cookbooks/date_extraction_cookbook) - Ask for named date parts, resolve and validate in code.
-- [Pre-parsed value extraction](https://docs.typesafe.ai/cookbooks/pre_parsed_value_extraction_cookbook) - Regex candidates, then Jev selects the requested span.
-- [Knowledge graph entity alignment](https://docs.typesafe.ai/cookbooks/entity_alignment) - Score merge / leave unlinked / send to a curator.
-- [Autoresearch feature discovery](https://docs.typesafe.ai/cookbooks/autoresearch_feature_discovery) - Propose TypeSafe questions as numeric features for a supervised model.
-- [Classification using confidence](https://docs.typesafe.ai/cookbooks/classification_using_confidence) - Report a fine label only when confidence is high; otherwise climb the hierarchy.
-- [Structure recovery](https://docs.typesafe.ai/cookbooks/autoformat) - Reconstruct Markdown from de-formatted plain text.
-- [Self-consistency: nouls](https://docs.typesafe.ai/cookbooks/consistency_noul_cookbook) / [choices](https://docs.typesafe.ai/cookbooks/consistency_choice_cookbook) - Route uncertain probabilities to review without hiding the raw values.
-
-## Patterns
-
-Architectural recipes from the docs.
-
-- [Speculative fan-out](https://docs.typesafe.ai/patterns/fan-out) - Ask many questions, including ones that may not apply; filter in code.
-- [Confidence-gated routing](https://docs.typesafe.ai/patterns/confidence-routing) - The answer is *what*; confidence is *whether to act*.
-- [Composite scoring](https://docs.typesafe.ai/patterns/composite-scoring) - Atomic scores, weights you own in code.
-- [Intent routing](https://docs.typesafe.ai/patterns/intent-routing) - Classify, then hand off to logic, a specialist LLM, or a human.
-
-See also: [How to build with TypeSafe](https://docs.typesafe.ai/concepts/how-to-build-with-system-one), [use-case map](https://docs.typesafe.ai/concepts/use-case-map), [confidence](https://docs.typesafe.ai/confidence).
-
 ## Articles
 
-Independent measurements, experiments, and news. Official posts live under [Official](#official).
+Independent measurements and experiments.
 
 - [Mini-Vibe Check: TypeSafe's Jev Judged Everything I’ve Written in 0.7 Seconds](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds) - Every's Mike Taylor runs Jev over a writing corpus.
-- [TypeSafe AI debuts model for machines that plays Doom](https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711) - News coverage of the launch.
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - Reproduces the JSON-vs-logit shortcut on Gemma and compares Jev with LLMs on the public Mario harness.
-- [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku) - Jev vs Jev gomoku with source and timing logs.
 - [Jev: one judge call, or twelve dimension scores? I measured both on three tasks](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) - Independent measurement on three classification tasks: one direct Jev question per row against 12–14 Jev-scored dimensions with locally fitted weights, with token costs, confidence intervals, and false-positive rates.
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16,000 calls vs gpt-5.4-mini and gpt-5.6-luna; where it wins, where it breaks, and a threshold procedure
 

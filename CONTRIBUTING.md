@@ -41,7 +41,7 @@ New sections are fine when a category has three or more items.
 - American English in `README.md`; Simplified Chinese in `README_zh.md`.
 - Sentence case. No trailing period unless the description has multiple sentences.
 - No emoji in list entries. No star-count badges (they go stale).
-- Do not paste secrets, API keys, or waitlist invite codes.
+- Do not paste secrets or API keys.
 
 ## Related
 
@@ -89,6 +89,6 @@ If you are not sure a project fits, open an issue first.
 
 - `README.md` 用美式英语；`README_zh.md` 用简体中文。
 - 条目描述用短句。不要在列表项里用 emoji，也不要加星标数徽章。
-- 不要粘贴密钥、API key 或邀请码。
+- 不要粘贴密钥或 API key。
 
 不确定是否适合收录时，可以先开 issue。
