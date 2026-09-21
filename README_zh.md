@@ -164,6 +164,7 @@ Jev 于 2026 年 9 月 15 日开放 early access。本列表为非官方整理�
 - [sudoku-vs-jev](https://github.com/zebedelu/sudoku-vs-jev) - 终端数独：Python 掌握规则，Jev 每回合选择一步，在存在必走步时表现稳健，一旦需要猜测则表现不稳。
 - [JevsBistro](https://github.com/andrewsilber/JevsBistro) - 确定性的 3D 餐厅模拟：重放同一场晚餐服务，对比规则驱动、摄像头辅助和由 Jev 规划的服务员，并记录每次决策的状态、选项、置信度和延迟。
 - [jev-asks-until-sure](https://github.com/mintannn/jev-asks-until-sure) - 用置信度决定还要问几题的二十问游戏：Jev 会断言、含糊其辞，或者干脆拒绝作答，界面同步播报每一次判定。在线：[jev.mintan.org](https://jev.mintan.org)。
+- [Jev × 2048](https://jev-2048-ultra.vercel.app) - 一个把 Jev 当作 2048 决策引擎的网页实验台，展示每一步的概率分布、置信度、延迟与 token 消耗，观察上下文设计如何影响决策模型。
 
 ## Agent 工具
 
