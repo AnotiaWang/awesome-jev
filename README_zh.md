@@ -166,6 +166,7 @@
 - [augustus](https://github.com/24601/Augustus) - 设计判断 skill：把 Choice/Score/Noul 映射到决策理论、重排序、路由等经典方法，并给出组合代数、问题设计诊断和可证伪的验证门
 - [jev-axi](https://github.com/shiftynick/jev-axi) - CLI 加 Claude Code、Codex hook：命令执行前先用 Jev 给危险性打分，并筛查抓取到的文本是否含提示注入，常规命令在本地判定、不发送任何内容
 - [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - 编程 Agent 的决策层：先走确定性规则再发一次 Jev 请求，可作为 Claude Code hook、MCP 服务、本地回环服务，并带共享团队策略。附带支撑其数字的 300 次注入测试。
+- [Jevonian](https://github.com/xinyao27/jevonian) - 本地 OpenAI / Anthropic / Responses 兼容代理：`jevonian/auto` 用一次 Jev 请求同时决定走哪个模型和用多深的思考，状态来自会话（近期消息与工具结果、连续报错次数、上下文余量、配额、候选能力、切换模型的缓存代价）；候选筛选和全部阈值由确定性代码负责，指定具体模型或显式 `jevonian/<route>` 时完全不调用 Jev，每次决策都会记录实际服务的模型、理由、真实 token 用量和估算成本。
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Claude Code 的 Stop 钩子：先从对话记录里找证据，只有在文件改动且之后没有通过检查时才发起一次四问的 Jev 调用来核实"完成"，任何出错都放行。
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Git 预提交钩子：用一次 Jev 调用判断提交信息是否匹配暂存的改动，并检查调试残留、未提及的改动和凭据泄露，只有检测到凭据才会阻止提交。
 - [jev-use](https://github.com/shitianfang/jev-use) - Claude Code、Codex 和 pi 插件：把 Agent 循环里不需要输出文本的判断批量交给 Jev，需要写字或置信度不足的步骤按类型化契约退回 LLM
