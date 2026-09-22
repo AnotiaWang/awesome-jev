@@ -157,6 +157,7 @@
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - 官方技能包：原语、模式、如何组织 evaluation。Claude Code：`claude plugin marketplace add typesafe-ai/skills`，再 `claude plugin install typesafe@typesafe-ai`。其他 Agent：`npx skills add typesafe-ai/skills --skill typesafe-ai`。
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code 插件 + npm 库：用 Jev 给工具调用打分并丢掉过时的，而不是把上下文摘要掉
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI：根据当前会话上下文，让 Jev 给下一步该用哪个 agent skill 排序，带 Claude Code hook
+- [langchain-loadout](https://github.com/deyna256/langchain-loadout) - LangChain deepagents 中间件，按轮路由 skill：Jev 从数百个 SKILL.md skill 中排序并核验本轮需要哪些，排序会拆分以适应 Jev 的调用上限，出错时回退到完整目录。判定器可替换。`pip install "langchain-loadout[jev]"`。
 - [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - 非官方 ACP/MCP 适配器：把 Jev 的类型化判断和 computer use 接到 Codex、Claude、Grok、OpenCode 旁边
 - [eve](https://github.com/vercel/eve) - Vercel 的 Agent 框架。实验性 `autoModel` 默认用 Gateway 上的 `typesafe-ai/jev`，从白名单里挑语言模型。
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - Node MCP，封装三条 cookbook：`jev_verify`（引文核验）、`jev_screen`（注入/护栏）、`jev_find`（无需 embedding 的语义排序）。`npx -y github:jkudish/jev-mcp`。
