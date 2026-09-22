@@ -102,6 +102,7 @@
 - [Jev Trade](https://github.com/aowang-ai/jev-trade) - Hyperliquid 实盘桌面：每个 tick 由 Jev 用 Choice 回答多空、开平或 hold、以及杠杆；下单和撤单由代码执行。默认 dry-run；配置私钥后会真下单。在线：[jev-trade.com](https://www.jev-trade.com/)。
 - [Jev Trader](https://github.com/jarrodwatts/jev-trader) - 每个 Monad 区块对 Kuru 的 MON-USDC 下一笔买卖。在线 demo：[jev-trader.vercel.app](https://jev-trader.vercel.app/)。
 - [Human Compiler](https://github.com/asfarsadewa/human-compiler) - 粘贴职场废话，Jev 打被动攻击 / 紧急感 / 信息密度，代码按 rustc 风格报诊断。在线：[human-compiler.asfarlab.fun](https://human-compiler.asfarlab.fun)。
+- [Jev Wrapped](https://github.com/gaborishka/jev-wrapped) - Telegram 频道透视：Jev 逐条判断公开频道近一年最多 1,500 条帖子，用一个 `Choice` 从十种帖子类型中选一种，再用三个 `Noul` 判断是否为付费广告、标题党和情绪施压；代码把每月构成画成可分享的卡片，并附上得分最高的帖子链接。在线：[wrapped.ivanhabor.com](https://wrapped.ivanhabor.com)。
 - [JEVMETER](https://github.com/ChetasLua/jevmeter) - 给任意视频挂上实时 Jev 仪表：逐句打分，导出 16:9 成片。演示：[Chetaslua](https://x.com/chetaslua/status/2100473581251748216)。
 - [jev-audio-beeper](https://github.com/santos-sanz/jev-audio-beeper) - 低延迟音频脏话检测：Jev 判定后 ffmpeg 在约 466 ms 内叠一声 beep，不改其余音轨。
 - [jev-askable-arm](https://github.com/TarunTomar122/jev-askable-arm) - 仿真 Franka 上用英文目标做 zero-shot；Jev 把硬编码原语串起来。
