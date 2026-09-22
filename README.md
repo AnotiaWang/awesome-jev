@@ -224,6 +224,7 @@ Independent measurements and experiments.
 
 - [MrJev/awesome-jev](https://github.com/MrJev/awesome-jev) - Selective list behind a 10-star bar, with hands-on reviews at [mrjev.com](https://mrjev.com/best-jev-tools/) recording what each tool sends and where.
 - [typesafe-ai on PyPI](https://pypi.org/project/typesafe-ai/) - Community redirect shim. The real package is `typesafe-sdk`; this name was registered to block slopsquatting. Not affiliated with TypeSafe.
+- [jev-in-the-wild](https://github.com/Jessie-QingYu/jev-in-the-wild) - Index that covers Reddit, Hacker News and YouTube as well as GitHub, and keeps a section for where Jev does not work. Entries are JSON with a schema; numbers are re-read daily.
 
 ## Contribute
 

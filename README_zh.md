@@ -224,6 +224,7 @@
 
 - [MrJev/awesome-jev](https://github.com/MrJev/awesome-jev) - 另一份更严的列表（10 星门槛），[mrjev.com](https://mrjev.com/best-jev-tools/) 上有动手评测，记录每个工具发了什么、发到哪。
 - [PyPI 上的 typesafe-ai](https://pypi.org/project/typesafe-ai/) - 社区注册的重定向包。真正该装的是 `typesafe-sdk`；此名用于挡住 slopsquatting。与 TypeSafe 无隶属关系。
+- [jev-in-the-wild](https://github.com/Jessie-QingYu/jev-in-the-wild) - 除 GitHub 外还收录 Reddit、Hacker News 和 YouTube 的索引，并单列一节记录 Jev 不适用的场景。条目为带 schema 的 JSON，数据每日刷新。
 
 ## 贡献
 
