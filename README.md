@@ -61,6 +61,7 @@ Official first, then community clients. Community packages are not affiliated wi
 - [LlamaIndex Jev](https://github.com/WiktorB2004/llama-index-jev) - Unofficial LlamaIndex reranker (`JevRerank`) and router (`JevSingleSelector` / `JevMultiSelector`) on the official Python SDK
 - [Swift SDK](https://github.com/ainame/swift-typesafe) - Unofficial Swift 6.4 client aligned with the Python SDK 0.6.0 API, including Linux
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - Unofficial dependency-free Swift 6 client for Choice / Score / Noul, with strict concurrency, configurable authentication and retries, and network-free tests
+- [kojev (Kotlin Multiplatform)](https://github.com/ItisNoMatter/kojev) - Community client for JVM, Android, and iOS. Choice and Score answers come back as your own enums; one typed way to read them, no default thresholds. Maven Central: `io.github.itisnomatter:kojev:0.1.0`.
 
 ## Applications
 
