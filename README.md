@@ -62,6 +62,7 @@ Official first, then community clients. Community packages are not affiliated wi
 - [Swift SDK](https://github.com/ainame/swift-typesafe) - Unofficial Swift 6.4 client aligned with the Python SDK 0.6.0 API, including Linux
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - Unofficial dependency-free Swift 6 client for Choice / Score / Noul, with strict concurrency, configurable authentication and retries, and network-free tests
 - [discern](https://github.com/doeixd/discern) - Unofficial Effect library: Choice / Noul / Score answers become typed patterns with an explicit `Uncertain` branch you must handle, plus routable procedures, with recording, replay, caching and call budgets as `DecisionModel` middleware. Provider-neutral; reaches Jev through `@effect/ai-typesafe`
+- [kojev (Kotlin Multiplatform)](https://github.com/ItisNoMatter/kojev) - Community client for JVM, Android, and iOS. Choice and Score answers come back as your own enums; one typed way to read them, no default thresholds. Maven Central: `io.github.itisnomatter:kojev:0.1.0`.
 
 ## Applications
 
