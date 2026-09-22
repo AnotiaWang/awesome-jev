@@ -138,6 +138,7 @@
 - [Little Airways](https://github.com/lbotinelly/jev-little-airways) - 玩具群岛空管：每架飞机只看见自己附近，Jev 判断备降 / 紧急 / 谁先落地，约 150 ms。
 - [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - 基于 PyBoy 的精灵宝可梦红版：路线和数值运算都由代码掌控，Jev 只在分支点做选择，每回合战斗都会记录一次用 Brier 分数对照 RAM 状态检验的濒死预测。
 - [jev-canvas](https://github.com/gaborishka/jev-canvas) - 用语音和摄像头追踪的手指在 tldraw 画布上绘图；Jev 在每段实时转写上决定动作、目标和位置。支持英语和乌克兰语指令。
+- [Jevtown](https://github.com/gaborishka/jevtown) - 由 10,000 个计算生成的人物组成的小镇，阅读你的帖子、分类广告、产品或标题。Jev 判断文本适合哪些人，选出最先的 600 位读者，并为每个人物回答一个 `Choice` 给出反应；只有高兴的读者比反感的读者至少多出这一波人数的十分之一，代码才把文本送往下一波。在线：[jevtown.ivanhabor.com](https://jevtown.ivanhabor.com)。
 - [sudoku-vs-jev](https://github.com/zebedelu/sudoku-vs-jev) - 终端数独：Python 掌握规则，Jev 每回合选择一步，在存在必走步时表现稳健，一旦需要猜测则表现不稳。
 - [chess-vs-jev](https://github.com/zebedelu/chess-vs-jev) - Pygame 国际象棋：python-chess 掌握规则，Jev 每回合选择一个合法走法，支持人 vs 人、人 vs Jev 和 Jev vs Jev。
 - [JevsBistro](https://github.com/andrewsilber/JevsBistro) - 确定性的 3D 餐厅模拟：重放同一场晚餐服务，对比规则驱动、摄像头辅助和由 Jev 规划的服务员，并记录每次决策的状态、选项、置信度和延迟。
