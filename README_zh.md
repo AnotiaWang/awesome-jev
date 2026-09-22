@@ -119,6 +119,7 @@
 - [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - 官方互动 demo，演示 [speculative fan-out](https://docs.typesafe.ai/patterns/fan-out)
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim 插件：用 Treesitter 把缓冲区拆成函数，向每个函数提出一个自然语言问题让 Jev 打分，结果按概率排进 quickfix 列表。
 - [jev-skip](https://github.com/valentynkit/jev-skip) - 浏览器扩展：读取 YouTube 字幕轨道，在片头结束前就把每段视频的赞助概率画到进度条上，不依赖众包数据库，据报告在 23 个视频上抓住了 SponsorBlock 77% 的赞助时长，每个视频约 0.0008 美元。
+- [Refix](https://refix.ai/?utm_source=awesome-jev&utm_medium=github&utm_campaign=anotiawang) - 增长：AI 通过自动运行产品实验、SEO、内容与广告，帮助你的产品更快增长。
 
 ## Demo 与游戏
 
