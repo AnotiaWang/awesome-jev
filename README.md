@@ -119,6 +119,7 @@ Open-source products and demos that put Jev in a real loop.
 - [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - Official interactive demo of [speculative fan-out](https://docs.typesafe.ai/patterns/fan-out)
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in the quickfix window.
 - [jev-skip](https://github.com/valentynkit/jev-skip) - Browser extension that reads the YouTube caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowd database, reporting catching 77% of SponsorBlock's sponsor seconds across 23 videos at $0.0008 a video.
+- [JevBystander](https://github.com/Nisaka520/JevBystander) - Android accessibility app that reads the visible WeChat chat screen and sends one batched Jev request (10-way intent `Choice`, 9-way emotion distribution, 0-3 urgency `Score`, 11-way reply-posture `Choice`) to show exactly three toasts - no generated reply text, no input injection, no screenshot or OCR; a local contact table supplies relation aliases as state context.
 
 ## Demos & Games
 
