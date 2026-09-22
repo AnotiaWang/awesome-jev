@@ -178,6 +178,7 @@
 - [slop-grader](https://github.com/lukstei/slop-grader) - 基于规则的命令行与 Agent skill：按自定义规则集（custom rulesets）用 Jev 评分和行级标志检查文本的 AI 废话、语法和技术文档质量，并引导 AI Agent 自动修复违规
 - [pytest-jev](https://github.com/allebee/pytest-jev) - pytest 插件，为 LLM 输出做语义断言：关于回复的每条自然语言断言都作为 Jev Noul 问题在一次请求中提出，p ≥ 0.8 才算通过，失败时列出每条断言的概率；`choice` 和 `score` 用于路由和评分检查
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - 面向代码、git diff 和 CSV 行的语义 grep：每个 5-60 行代码块一个 Noul，每次 Jev 请求打包 16 个块，输出 grep 风格的 file:line 和退出码，可在 CI 中用英文句子做规则检查
+- [jevgrep (allebee)](https://github.com/allebee/jevgrep) - 面向日志的流式语义 grep：对每一行向 Jev 提出一个 Noul 问题（用自然语言描述条件），打印概率不低于阈值的行，也可接在 `tail -f` 后使用
 
 ## 研究与开源模型
 
