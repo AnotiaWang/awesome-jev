@@ -61,6 +61,7 @@
 - [LlamaIndex Jev](https://github.com/WiktorB2004/llama-index-jev) - 非官方 LlamaIndex 重排序（`JevRerank`）与路由（`JevSingleSelector` / `JevMultiSelector`），基于官方 Python SDK
 - [Swift SDK](https://github.com/ainame/swift-typesafe) - 非官方 Swift 6.4 客户端，对齐 Python SDK 0.6.0 API，含 Linux
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - 非官方零依赖 Swift 6 客户端，支持 Choice / Score / Noul、严格并发、可配置鉴权与重试，以及无网络测试
+- [discern](https://github.com/doeixd/discern) - 非官方 Effect 库：把 Choice / Noul / Score 答案变成带类型的模式匹配，`Uncertain` 是必须显式处理的分支，并支持可路由的 procedure；录制、回放、缓存与调用预算都做成 `DecisionModel` 中间件。不绑定供应商，通过 `@effect/ai-typesafe` 接入 Jev
 
 ## 应用
 
