@@ -76,6 +76,7 @@
 - [Yappy](https://yappy.biz/jev/) - macOS 语音 Agent（闭源，附公开测量数据）。在其托管方案上，Jev 每一步从窗口的无障碍控件表中选择操作与目标控件；只有输入文本时才调用聊天模型，置信度下降时交回完整 Agent。作者报告：每次决策 275–690 ms，五次共 $0.003。
 - [Mobile Jev](https://github.com/droidrun/mobile-jev) - [Mobilerun](https://mobilerun.ai) 上的 Android Agent：每次点击由 Jev 决定。打开 Uber，旧金山机场 → 金门大桥，约 21 秒 / 9 步到支付页。含实时 studio、CLI 与 traces。不需要 ADB。
 - [Unclutter](https://github.com/kitze/unclutter) - Chrome / Firefox 扩展：Jev 标出页面上不重要的元素，本地按页面模板记住并在下次访问时藏起来。
+- [jevMail](https://github.com/ilyamk/jev-gmail-ai-spam-filter-and-labeling) - 非官方开源 Gmail AI 垃圾邮件过滤、自动标签与收件箱整理工具：Jev 理解每封邮件的意图，应用自定义标签，并可自动归档高置信度的无用邮件
 - [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome 扩展：Jev 判断 DOM 元素是不是广告再删掉。自带密钥、无后端。作者写明这是 demo，不是正经广告拦截器
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - 非官方 Home Assistant 集成：把关于实体状态的类型化提问变成传感器与自动化动作；可直接选取实体、设备或区域来构造 state，并附带用量、成本与每日 token 预算实体
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
