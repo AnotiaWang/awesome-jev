@@ -61,11 +61,13 @@
 - [LlamaIndex Jev](https://github.com/WiktorB2004/llama-index-jev) - 非官方 LlamaIndex 重排序（`JevRerank`）与路由（`JevSingleSelector` / `JevMultiSelector`），基于官方 Python SDK
 - [Swift SDK](https://github.com/ainame/swift-typesafe) - 非官方 Swift 6.4 客户端，对齐 Python SDK 0.6.0 API，含 Linux
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - 非官方零依赖 Swift 6 客户端，支持 Choice / Score / Noul、严格并发、可配置鉴权与重试，以及无网络测试
+- [discern](https://github.com/doeixd/discern) - 非官方 Effect 库：把 Choice / Noul / Score 答案变成带类型的模式匹配，`Uncertain` 是必须显式处理的分支，并支持可路由的 procedure；录制、回放、缓存与调用预算都做成 `DecisionModel` 中间件。不绑定供应商，通过 `@effect/ai-typesafe` 接入 Jev
 
 ## 应用
 
 把 Jev 放进真实循环里的开源产品与 demo。
 
+- [MemSearch](https://github.com/zilliztech/memsearch) - 面向编程 Agent 的 Markdown 记忆系统，提供可选的 Jev Noul 重排器与公开的中英文检索评测；属于社区集成，并非 TypeSafe 官方 SDK
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - [Browser Use](https://github.com/browser-use) 的浏览器 Agent。一次请求里由 Jev 选出操作和 DOM 元素；只有 `TYPE_TEXT` 才让小模型写字。Google Flights 苏黎世 → 伦敦约 7 秒。含库、本地 inspector 与测时。
 - [Jev Web Analyzer](https://github.com/replynodes/jev-web-analyzer) - 社区项目：把公开 SaaS 落地页提取为干净 Markdown，再让 Jev 提出十个有界的 `Choice` 问题，判断首次访问者能理解什么，包括最先要改的地方。
 - [jev-align (Sutro)](https://github.com/sutro-sh/jev-align) - 非官方主动学习 CLI：用 Jev 评估 CSV、Parquet 和 JSONL 数据，让人工标注不确定样本与审计样本，并用 GEPA 提议改进后的定义
