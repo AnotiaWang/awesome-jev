@@ -63,6 +63,7 @@ Official first, then community clients. Community packages are not affiliated wi
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - Unofficial dependency-free Swift 6 client for Choice / Score / Noul, with strict concurrency, configurable authentication and retries, and network-free tests
 - [discern](https://github.com/doeixd/discern) - Unofficial Effect library: Choice / Noul / Score answers become typed patterns with an explicit `Uncertain` branch you must handle, plus routable procedures, with recording, replay, caching and call budgets as `DecisionModel` middleware. Provider-neutral; reaches Jev through `@effect/ai-typesafe`
 - [kojev (Kotlin Multiplatform)](https://github.com/ItisNoMatter/kojev) - Community client for JVM, Android, and iOS. Choice and Score answers come back as your own enums; one typed way to read them, no default thresholds. Maven Central: `io.github.itisnomatter:kojev:0.1.0`.
+- [jev4k](https://github.com/pambrose/jev4k) - Unofficial JVM Kotlin client: Choice, Score, and Noul as a DSL, with answers read back as typed values including enums. Maven Central: `com.pambrose:jev4k`
 - [hunch](https://github.com/steven-shoemaker/hunch) - Unofficial Python library, with a TypeScript port, that turns Choice / Score / Noul into functions over lists and DataFrames (classify, score, check, where, extract, pick, rank, verify), with deduplication, caching, and optional escalation of unsure rows to an LLM that must pick from the same labels
 
 ## Applications
@@ -160,6 +161,8 @@ Tools that expose Jev to coding agents and MCP clients.
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code plugin and npm library: Jev scores tool calls and drops stale ones instead of summarizing context
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI: Jev ranks which agent skill fits the next step from live session context, with Claude Code hooks
 - [langchain-loadout](https://github.com/deyna256/langchain-loadout) - LangChain deepagents middleware for per-turn skill routing: Jev ranks and verifies which SKILL.md skills each turn needs from a catalog of hundreds, splitting the ranking to fit Jev's limits and falling back to the full catalog on failure. The judge is pluggable. `pip install "langchain-loadout[jev]"`.
+- [JevRouter](https://github.com/BillionsBobby/JevRouter) - Unofficial router that puts models, subagents, skills, MCP tools, and CLIs in one candidate set: Jev answers one Choice, and code enforces availability, permissions, risk, and confirmation. On 10 Toolathlon tasks, position-wise hits were 38–44% for Jev against 24% for DeepSeek V4.1 Flash
+- [JevLoop](https://github.com/zjunlp/JevLoop) - Unofficial agent loop that sends each fork (tool, risk, done) to Jev 1.13.0 and keeps the LLM for writing; with no key it falls back to local Laya, then rules. `npm run demo` runs offline
 - [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - Unofficial ACP/MCP adapter: typed Jev decisions and computer use beside Codex, Claude, Grok, and OpenCode
 - [eve](https://github.com/vercel/eve) - Vercel's agent framework. Experimental `autoModel` defaults to Gateway `typesafe-ai/jev` to pick a language model from an allowlist.
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - Node MCP wrapping three cookbook patterns: `jev_verify` (citation check), `jev_screen` (prompt-injection / guardrails), `jev_find` (semantic ranking without embeddings). `npx -y github:jkudish/jev-mcp`.
@@ -191,6 +194,8 @@ Tools that expose Jev to coding agents and MCP clients.
 
 Independent work inspired by Jev's interface. These are not TypeSafe models.
 
+- [Kev](https://github.com/jaredpalmer/kev) - Unofficial Qwen3.5 decision models (0.8B, 4B, 9B) you can train and serve yourself. Choice, Score, and Noul in one forward pass, with published weights and frozen eval suites, and a local server that speaks `/v1/systemone`. Not TypeSafe's model
+- [Von](https://github.com/wfzyx/von) - Unofficial local non-autoregressive System One model with a `/v1/systemone`-compatible server and a Doom demo where each move is one forward pass. Not TypeSafe's model
 - [jevlike](https://github.com/vinnylarouge/jevlike) - Train a small one-pass scorer that maps context + N text options to a probability per option. Includes Doom / chess vision demos and a Wikispeedia next-click example. Explicitly *not* a reproduction of TypeSafe's architecture or RLCD.
 - [openjev](https://github.com/TheoLeeCJ/openjev) - Can we run something Jev-like on a home RTX 3090? Reads option logits instead of generating text. Not TypeSafe's model.
 - [PocketJev](https://github.com/NullPo-jp/PocketJev) - On-device iPhone visual decisions with MLX + Qwen3-VL option logits. Camera + 3-choice, no text generation, ~1s, no photo saved.
@@ -222,6 +227,8 @@ Independent measurements and experiments.
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - Reproduces the JSON-vs-logit shortcut on Gemma and compares Jev with LLMs on the public Mario harness.
 - [Jev: one judge call, or twelve dimension scores? I measured both on three tasks](https://agentjournal.dev/blog/llm-judge-vs-feature-extraction/) - Independent measurement on three classification tasks: one direct Jev question per row against 12–14 Jev-scored dimensions with locally fitted weights, with token costs, confidence intervals, and false-positive rates.
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16,000 calls vs gpt-5.4-mini and gpt-5.6-luna; where it wins, where it breaks, and a threshold procedure
+- [Is Jev as Accurate as Frontier Models at Classification?](https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification/) - OpenRouter runs all 3,080 Banking77 test utterances through Jev 1.13 and Claude Opus 5: 81.0% vs 84.4% accuracy, 175 ms vs 2,266 ms median, about $0.11 vs $2.42 per 1,000
+- [We Tested Jev on 791 Labeled Decisions Against Four LLMs](https://www.ayautomate.com/blog/jev-vs-llm-benchmark) - Independent OpenRouter run on 8-way and 77-way Banking77 routing plus prompt-injection detection: Jev matches the small models, trails GPT-5.6 Terra by about 5 points on 77-way routing, and a 0.80 confidence gate that escalates the rest to Terra matches Terra's accuracy at about a quarter of the cost
 
 ## Related
 
