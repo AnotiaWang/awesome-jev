@@ -152,6 +152,7 @@ Toys, live sites, and realtime agents.
 - [JevsBistro](https://github.com/andrewsilber/JevsBistro) - Deterministic 3D restaurant sim that replays the same dinner service to compare rule-based, camera-assisted, and Jev-planned waiters, logging each decision's state, options, confidence, and latency.
 - [jev-asks-until-sure](https://github.com/mintannn/jev-asks-until-sure) - Twenty questions where confidence sets the stopping rule: Jev commits, hedges, or refuses to guess, and the UI narrates every judgment. Live: [jev.mintan.org](https://jev.mintan.org).
 - [Jev × 2048](https://jev-2048-ultra.vercel.app) - A web lab where Jev is the 2048 decision engine, showing each move's probability distribution, confidence, latency, and token cost so you can watch how context design shapes the decision model.
+- [Book Aurora](https://github.com/dani1005/book-aurora) - Jev reads a whole novel in seconds: each passage gets nine emotion scores plus intensity in one call, and every passage becomes a feathered row of colour. Frankenstein is 601 passages, 6,010 typed decisions, about 25 s and 3 cents; exports a poster.
 
 ## Agent Tools
 
