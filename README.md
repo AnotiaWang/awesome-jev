@@ -63,6 +63,7 @@ Official first, then community clients. Community packages are not affiliated wi
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - Unofficial dependency-free Swift 6 client for Choice / Score / Noul, with strict concurrency, configurable authentication and retries, and network-free tests
 - [discern](https://github.com/doeixd/discern) - Unofficial Effect library: Choice / Noul / Score answers become typed patterns with an explicit `Uncertain` branch you must handle, plus routable procedures, with recording, replay, caching and call budgets as `DecisionModel` middleware. Provider-neutral; reaches Jev through `@effect/ai-typesafe`
 - [kojev (Kotlin Multiplatform)](https://github.com/ItisNoMatter/kojev) - Community client for JVM, Android, and iOS. Choice and Score answers come back as your own enums; one typed way to read them, no default thresholds. Maven Central: `io.github.itisnomatter:kojev:0.1.0`.
+- [hunch](https://github.com/steven-shoemaker/hunch) - Unofficial Python library, with a TypeScript port, that turns Choice / Score / Noul into functions over lists and DataFrames (classify, score, check, where, extract, pick, rank, verify), with deduplication, caching, and optional escalation of unsure rows to an LLM that must pick from the same labels
 
 ## Applications
 
@@ -158,6 +159,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - Official skill: primitives, patterns, and how to structure evaluations. Claude Code: `claude plugin marketplace add typesafe-ai/skills` then `claude plugin install typesafe@typesafe-ai`. Other agents: `npx skills add typesafe-ai/skills --skill typesafe-ai`.
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code plugin and npm library: Jev scores tool calls and drops stale ones instead of summarizing context
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI: Jev ranks which agent skill fits the next step from live session context, with Claude Code hooks
+- [langchain-loadout](https://github.com/deyna256/langchain-loadout) - LangChain deepagents middleware for per-turn skill routing: Jev ranks and verifies which SKILL.md skills each turn needs from a catalog of hundreds, splitting the ranking to fit Jev's limits and falling back to the full catalog on failure. The judge is pluggable. `pip install "langchain-loadout[jev]"`.
 - [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - Unofficial ACP/MCP adapter: typed Jev decisions and computer use beside Codex, Claude, Grok, and OpenCode
 - [eve](https://github.com/vercel/eve) - Vercel's agent framework. Experimental `autoModel` defaults to Gateway `typesafe-ai/jev` to pick a language model from an allowlist.
 - [jev-mcp](https://github.com/jkudish/jev-mcp) - Node MCP wrapping three cookbook patterns: `jev_verify` (citation check), `jev_screen` (prompt-injection / guardrails), `jev_find` (semantic ranking without embeddings). `npx -y github:jkudish/jev-mcp`.
