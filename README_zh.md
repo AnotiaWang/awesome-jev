@@ -120,6 +120,7 @@
 - [Smart home assistant demo](https://docs.typesafe.ai/demos/smart-home) - 官方互动 demo，演示 [speculative fan-out](https://docs.typesafe.ai/patterns/fan-out)
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim 插件：用 Treesitter 把缓冲区拆成函数，向每个函数提出一个自然语言问题让 Jev 打分，结果按概率排进 quickfix 列表。
 - [jev-skip](https://github.com/valentynkit/jev-skip) - 浏览器扩展：读取 YouTube 字幕轨道，在片头结束前就把每段视频的赞助概率画到进度条上，不依赖众包数据库，据报告在 23 个视频上抓住了 SponsorBlock 77% 的赞助时长，每个视频约 0.0008 美元。
+- [JevBystander](https://github.com/Nisaka520/JevBystander) - 安卓无障碍应用：读取微信当前可见的聊天文字，一次批量 Jev 请求（10 类意图 `Choice`、9 类情绪分布、0–3 着急程度 `Score`、11 类回复姿态 `Choice`）后只弹三条 Toast；不生成回复文案、不注入输入、不截屏也不做 OCR；本地联系人表把关系别名放进 state
 
 ## Demo 与游戏
 
