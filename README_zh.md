@@ -160,7 +160,7 @@
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - 官方技能包：原语、模式、如何组织 evaluation。Claude Code：`claude plugin marketplace add typesafe-ai/skills`，再 `claude plugin install typesafe@typesafe-ai`。其他 Agent：`npx skills add typesafe-ai/skills --skill typesafe-ai`。
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code 插件 + npm 库：用 Jev 给工具调用打分并丢掉过时的，而不是把上下文摘要掉
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI：根据当前会话上下文，让 Jev 给下一步该用哪个 agent skill 排序，带 Claude Code hook
-- [langchain-loadout](https://github.com/deyna256/langchain-loadout) - LangChain deepagents 中间件，按轮路由 skill：Jev 从数百个 SKILL.md skill 中排序并核验本轮需要哪些，排序会拆分以适应 Jev 的调用上限，出错时回退到完整目录。判定器可替换。`pip install "langchain-loadout[jev]"`。
+- [langchain-skill-router](https://github.com/deyna256/langchain-skill-router) - LangChain deepagents 中间件，按轮路由 skill：Jev 从数百个 SKILL.md skill 中排序并核验本轮需要哪些，排序会拆分以适应 Jev 的调用上限，出错时回退到完整目录。判定器可替换。`pip install "langchain-skill-router[jev]"`。
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - 非官方路由器：模型、子 agent、skill、MCP 工具和 CLI 放进同一个候选集，Jev 做一次 Choice，代码负责可用性、权限、风险和确认。10 个 Toolathlon 任务上，Jev 的位置命中率是 38–44%，DeepSeek V4.1 Flash 是 24%
 - [JevLoop](https://github.com/zjunlp/JevLoop) - 非官方 Agent 循环：每个分叉（选工具、风险、是否做完）交给 Jev 1.13.0，写字仍留给 LLM；没有 key 时退到本地 Laya，再退到规则。`npm run demo` 可以离线跑
 - [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - 非官方 ACP/MCP 适配器：把 Jev 的类型化判断和 computer use 接到 Codex、Claude、Grok、OpenCode 旁边
