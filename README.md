@@ -229,6 +229,7 @@ Independent measurements and experiments.
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16,000 calls vs gpt-5.4-mini and gpt-5.6-luna; where it wins, where it breaks, and a threshold procedure
 - [Is Jev as Accurate as Frontier Models at Classification?](https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification/) - OpenRouter runs all 3,080 Banking77 test utterances through Jev 1.13 and Claude Opus 5: 81.0% vs 84.4% accuracy, 175 ms vs 2,266 ms median, about $0.11 vs $2.42 per 1,000
 - [We Tested Jev on 791 Labeled Decisions Against Four LLMs](https://www.ayautomate.com/blog/jev-vs-llm-benchmark) - Independent OpenRouter run on 8-way and 77-way Banking77 routing plus prompt-injection detection: Jev matches the small models, trails GPT-5.6 Terra by about 5 points on 77-way routing, and a 0.80 confidence gate that escalates the rest to Terra matches Terra's accuracy at about a quarter of the cost
+- [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - Independent calibration check on fair dice, coins and spinners, where the true probability is known exactly, and on synthetic forecast documents; Jev selects face 1 on all 400 die rolls with 82.9% mean reported probability against 19.0% accuracy. Code and raw responses on [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice).
 
 ## Related
 

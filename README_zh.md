@@ -229,6 +229,7 @@
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16000 次调用对照 gpt-5.4-mini 与 gpt-5.6-luna：哪里赢、哪里崩、阈值怎么定
 - [Is Jev as Accurate as Frontier Models at Classification?](https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification/) - OpenRouter 用全部 3080 条 Banking77 测试集对比 Jev 1.13 与 Claude Opus 5：准确率 81.0% 对 84.4%，中位延迟 175 ms 对 2266 ms，每千次约 $0.11 对 $2.42
 - [We Tested Jev on 791 Labeled Decisions Against Four LLMs](https://www.ayautomate.com/blog/jev-vs-llm-benchmark) - 独立评测，经 OpenRouter 跑 8 类和 77 类 Banking77 路由以及提示注入检测：Jev 与中小模型接近，77 类路由上落后 GPT-5.6 Terra 约 5 个点；置信度不低于 0.80 才采用、其余交给 Terra 时，准确率与 Terra 单独跑对齐，成本大约是其四分之一
+- [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - 独立校准实测：用真实概率已知的公平骰子、硬币和转盘，以及合成预测文档测试 Jev；在 400 次隐藏六面骰实验中，Jev 每次都选择 1，平均报告概率为 82.9%，实际命中率为 19.0%。代码和原始响应见 [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice)。
 
 ## 相关
 
