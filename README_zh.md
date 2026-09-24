@@ -86,10 +86,12 @@
 - [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome 扩展：Jev 判断 DOM 元素是不是广告再删掉。自带密钥、无后端。作者写明这是 demo，不是正经广告拦截器
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - 非官方 Home Assistant 集成：把关于实体状态的类型化提问变成传感器与自动化动作；可直接选取实体、设备或区域来构造 state，并附带用量、成本与每日 token 预算实体
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
+- [JevPDF](https://github.com/kylemclaren/jevpdf) - 非官方的 PDF 语义版 Ctrl+F：pdf.js 在浏览器中逐行提取文本，Jev 对每一行问一个 Noul（这一行是否回答了问题），命中的行按概率排序并高亮
 - [blink](https://github.com/ellipsis-dev/blink) - 代码库搜索：一组 walker 并行走文件系统，由 Jev 判断哪个文件能回答自然语言查询
 - [Jev Search](https://github.com/superagents-lab/jev-search) - 非官方网页搜索应用：用 Jev 的 Choice 和 Noul 判断选择来源、时间范围和候选查询词，再对 Search1API 返回的结果进行相关性排序
 - [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - 非官方 JSON 输入/输出 CLI：使用 Jev 的 `Noul` 判断重排搜索结果、过滤不含可用证据的文档，或提取与查询相关的原文片段
 - [jevsearch](https://github.com/kylemclaren/jevsearch) - 非官方 shadcn/ui 站内搜索组件：首次按键即显示关键词结果，随后用一次 Jev 请求对前 20 条重排：每个页面一个 Noul，一个 Choice 选出最佳答案，再用一个 Noul 判断是否有页面能回答
+- [jev-research-pipeline](https://github.com/shimo4228/jev-research-pipeline) - 非官方实验性研究监测流水线：Jev 按研究问题筛选论文等来源（Noul 门控 + Score 评分），阈值由代码判定，Qwen 为通过筛选的来源撰写按问题组织的 Obsidian 笔记
 - [neo4jev](https://github.com/jexp/neo4jev) - Neo4j 图导航：每个节点上由 Jev 选择跟哪条关系走，并对 log 概率做 beam search
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - 实验性 Hono 路由器：用自然语言描述路由，由 Jev 匹配进来的请求
 - [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C 扩展：把 `jev_noul` / `jev_choice` / `jev_score` 做成 SQL 函数，只依赖 libcurl
@@ -123,6 +125,7 @@
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim 插件：用 Treesitter 把缓冲区拆成函数，向每个函数提出一个自然语言问题让 Jev 打分，结果按概率排进 quickfix 列表。
 - [jev-skip](https://github.com/valentynkit/jev-skip) - 浏览器扩展：读取 YouTube 字幕轨道，在片头结束前就把每段视频的赞助概率画到进度条上，不依赖众包数据库，据报告在 23 个视频上抓住了 SponsorBlock 77% 的赞助时长，每个视频约 0.0008 美元。
 - [JevBystander](https://github.com/Nisaka520/JevBystander) - 安卓无障碍应用：读取微信当前可见的聊天文字，一次批量 Jev 请求（10 类意图 `Choice`、9 类情绪分布、0–3 着急程度 `Score`、11 类回复姿态 `Choice`）后只弹三条 Toast；不生成回复文案、不注入输入、不截屏也不做 OCR；本地联系人表把关系别名放进 state
+- [Paper Radar](https://github.com/Eliot5566/JEV-Paper-Radar) - 非官方每日 arXiv 和 bioRxiv 论文雷达：Jev 对每篇新论文按每条自然语言兴趣给出一个 `Noul` 判断，代码应用阈值，再由 GitHub Actions 发布网页和 RSS 订阅源。[公开运行页面](https://eliot5566.github.io/JEV-Paper-Radar/public/) 无需密钥即可查看
 
 ## Demo 与游戏
 
@@ -153,6 +156,7 @@
 - [JevsBistro](https://github.com/andrewsilber/JevsBistro) - 确定性的 3D 餐厅模拟：重放同一场晚餐服务，对比规则驱动、摄像头辅助和由 Jev 规划的服务员，并记录每次决策的状态、选项、置信度和延迟。
 - [jev-asks-until-sure](https://github.com/mintannn/jev-asks-until-sure) - 用置信度决定还要问几题的二十问游戏：Jev 会断言、含糊其辞，或者干脆拒绝作答，界面同步播报每一次判定。在线：[jev.mintan.org](https://jev.mintan.org)。
 - [Jev × 2048](https://jev-2048-ultra.vercel.app) - 一个把 Jev 当作 2048 决策引擎的网页实验台，展示每一步的概率分布、置信度、延迟与 token 消耗，观察上下文设计如何影响决策模型。
+- [Book Aurora](https://github.com/dani1005/book-aurora) - 让 Jev 几十秒读完一整本小说：每段文字一次调用返回九种情绪打分和强度，每段变成一行羽化的色带，整本书就是一幅极光。《弗兰肯斯坦》601 段、6010 次类型化判断，约 25 秒、3 美分，可导出海报。
 
 ## Agent 工具
 
@@ -161,7 +165,7 @@
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - 官方技能包：原语、模式、如何组织 evaluation。Claude Code：`claude plugin marketplace add typesafe-ai/skills`，再 `claude plugin install typesafe@typesafe-ai`。其他 Agent：`npx skills add typesafe-ai/skills --skill typesafe-ai`。
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code 插件 + npm 库：用 Jev 给工具调用打分并丢掉过时的，而不是把上下文摘要掉
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI：根据当前会话上下文，让 Jev 给下一步该用哪个 agent skill 排序，带 Claude Code hook
-- [langchain-loadout](https://github.com/deyna256/langchain-loadout) - LangChain deepagents 中间件，按轮路由 skill：Jev 从数百个 SKILL.md skill 中排序并核验本轮需要哪些，排序会拆分以适应 Jev 的调用上限，出错时回退到完整目录。判定器可替换。`pip install "langchain-loadout[jev]"`。
+- [langchain-skill-router](https://github.com/deyna256/langchain-skill-router) - LangChain deepagents 中间件，按轮路由 skill：Jev 从数百个 SKILL.md skill 中排序并核验本轮需要哪些，排序会拆分以适应 Jev 的调用上限，出错时回退到完整目录。判定器可替换。`pip install "langchain-skill-router[jev]"`。
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - 非官方路由器：模型、子 agent、skill、MCP 工具和 CLI 放进同一个候选集，Jev 做一次 Choice，代码负责可用性、权限、风险和确认。10 个 Toolathlon 任务上，Jev 的位置命中率是 38–44%，DeepSeek V4.1 Flash 是 24%
 - [JevLoop](https://github.com/zjunlp/JevLoop) - 非官方 Agent 循环：每个分叉（选工具、风险、是否做完）交给 Jev 1.13.0，写字仍留给 LLM；没有 key 时退到本地 Laya，再退到规则。`npm run demo` 可以离线跑
 - [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - 非官方 ACP/MCP 适配器：把 Jev 的类型化判断和 computer use 接到 Codex、Claude、Grok、OpenCode 旁边
@@ -178,7 +182,7 @@
 - [jev-pref](https://github.com/doeixd/jev-pref) - 把 AGENTS.md 里的偏好变成 Jev 驱动的 AI linter：在 `jev-pref.json` 定义项目语义审查规则，对 diff hunk、暂存文件或 PR 求值，并把结果反馈给编程 Agent。`npx jev-pref setup`。
 - [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill：Agent 需要有界决策时去问 Jev。
 - [jev-system-architect](https://github.com/samtay32/jev-system-architect) - 专门找脆弱语义逻辑、改写成 Choice / Score / Noul 边界的 skill。
-- [augustus](https://github.com/24601/Augustus) - 设计判断 skill：把 Choice/Score/Noul 映射到决策理论、重排序、路由等经典方法，并给出组合代数、问题设计诊断和可证伪的验证门
+- [augustus](https://github.com/24601/Augustus) - 非官方的智能体技能，用于发现、构建、评估和改进决策模型系统，提供组合规则、评估框架和有界的提示词／程序优化方法；默认以 TypeSafe Jev 为托管模型示例
 - [jev-axi](https://github.com/shiftynick/jev-axi) - CLI 加 Claude Code、Codex hook：命令执行前先用 Jev 给危险性打分，并筛查抓取到的文本是否含提示注入，常规命令在本地判定、不发送任何内容
 - [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - 编程 Agent 的决策层：先走确定性规则再发一次 Jev 请求，可作为 Claude Code hook、MCP 服务、本地回环服务，并带共享团队策略。附带支撑其数字的 300 次注入测试。
 - [Jevonian](https://github.com/xinyao27/jevonian) - 本地 OpenAI / Anthropic / Responses 兼容代理：`jevonian/auto` 用一次 Jev 请求同时决定走哪个模型和用多深的思考，状态来自会话（近期消息与工具结果、连续报错次数、上下文余量、配额、候选能力、切换模型的缓存代价）；候选筛选和全部阈值由确定性代码负责，指定具体模型或显式 `jevonian/<route>` 时完全不调用 Jev，每次决策都会记录实际服务的模型、理由、真实 token 用量和估算成本。
@@ -190,6 +194,7 @@
 - [pytest-jev](https://github.com/allebee/pytest-jev) - pytest 插件，为 LLM 输出做语义断言：关于回复的每条自然语言断言都作为 Jev Noul 问题在一次请求中提出，p ≥ 0.8 才算通过，失败时列出每条断言的概率；`choice` 和 `score` 用于路由和评分检查
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - 面向代码、git diff 和 CSV 行的语义 grep：每个 5-60 行代码块一个 Noul，每次 Jev 请求打包 16 个块，输出 grep 风格的 file:line 和退出码，可在 CI 中用英文句子做规则检查
 - [jevgrep (allebee)](https://github.com/allebee/jevgrep) - 面向日志的流式语义 grep：对每一行向 Jev 提出一个 Noul 问题（用自然语言描述条件），打印概率不低于阈值的行，也可接在 `tail -f` 后使用
+- [wellposed](https://github.com/suraj-phanindra/wellposed) - 面向 Jev 请求的离线 linter 与 agent skill：40 条结构检查完全不调用模型（缺少「以上都不是」选项、state 路径失效、criteria 形状错误），再用 Jev 自身检查结构无法判定的部分，并附带为两层分别打分的标注语料。
 
 ## 研究与开源模型
 
@@ -219,6 +224,7 @@
 - [Jev search rerank eval](https://github.com/zhuyansen/jev-search-rerank-eval) - 9831 对标注：Jev rerank 对照 BM25 / bge-m3，并量化评委循环偏差。融合最好；Jev 单独打不过 embedding
 - [吸烟史抽取评测](https://github.com/vclic/smoking-extraction-benchmark) - 1000 条合成病历：Jev 对 OpenAI structured outputs，比准确率、成本和延迟
 - [Jevals.com](https://jevals.com/) - 独立评测：托管 Jev 与六个 LLM 回答同样的 Noul、Choice、Score 问题，按人工标签打分（PubMedQA、Banking77、HelpSteer2），每次决策的日志公开
+- [stuntd](https://github.com/bladedevoff/stuntd) - 基于开放 Laya 模型的本地代理，实现 Jev System One API；记录来自 Jev 上游的 Choice、Score 和 Noul 答案，为每个问题训练一个决策头，并以校准过的置信度阈值提供服务，低于阈值时回退到上游
 
 ## 文章
 
@@ -230,6 +236,7 @@
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16000 次调用对照 gpt-5.4-mini 与 gpt-5.6-luna：哪里赢、哪里崩、阈值怎么定
 - [Is Jev as Accurate as Frontier Models at Classification?](https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification/) - OpenRouter 用全部 3080 条 Banking77 测试集对比 Jev 1.13 与 Claude Opus 5：准确率 81.0% 对 84.4%，中位延迟 175 ms 对 2266 ms，每千次约 $0.11 对 $2.42
 - [We Tested Jev on 791 Labeled Decisions Against Four LLMs](https://www.ayautomate.com/blog/jev-vs-llm-benchmark) - 独立评测，经 OpenRouter 跑 8 类和 77 类 Banking77 路由以及提示注入检测：Jev 与中小模型接近，77 类路由上落后 GPT-5.6 Terra 约 5 个点；置信度不低于 0.80 才采用、其余交给 Terra 时，准确率与 Terra 单独跑对齐，成本大约是其四分之一
+- [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - 独立校准实测：用真实概率已知的公平骰子、硬币和转盘，以及合成预测文档测试 Jev；在 400 次隐藏六面骰实验中，Jev 每次都选择 1，平均报告概率为 82.9%，实际命中率为 19.0%。代码和原始响应见 [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice)。
 
 ## 相关
 

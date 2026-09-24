@@ -86,10 +86,12 @@ Open-source products and demos that put Jev in a real loop.
 - [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome extension: Jev judges whether a DOM element is an ad and removes it. BYOK, no backend. Author calls it a demo, not a real ad blocker
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - Unofficial Home Assistant integration: typed questions about entity state become sensors and automation actions, with a target picker that builds the state from the user's own entities and usage, cost, and daily-budget entities alongside the answers
 - [Every](https://github.com/sufianetaouil/every) - Semantic code-search CLI: a yes/no question against every function, ranked by Noul probability.
+- [JevPDF](https://github.com/kylemclaren/jevpdf) - Unofficial Ctrl+F by meaning for PDFs: pdf.js extracts lines in the browser, Jev answers one Noul per line on whether it answers the query, and matching lines light up ranked by probability
 - [blink](https://github.com/ellipsis-dev/blink) - Codebase search: an ensemble of walkers asks Jev which file answers a natural-language query
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Unofficial web search app using Jev's Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API
 - [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - Unofficial JSON-in/JSON-out CLI that uses Jev `Noul` judgments to rerank search results, filter documents without usable evidence, or extract query-specific passages
 - [jevsearch](https://github.com/kylemclaren/jevsearch) - Unofficial shadcn/ui site-search block: keyword hits appear on the first keystroke, then one Jev request re-ranks the top 20 with a Noul per page, a Choice for the best answer, and a Noul for whether any page answers
+- [jev-research-pipeline](https://github.com/shimo4228/jev-research-pipeline) - Unofficial experimental research monitor: Jev screens papers and other sources against each open research question (Noul gates, Score dimensions), code applies thresholds, and Qwen writes question-centric notes into an Obsidian vault
 - [neo4jev](https://github.com/jexp/neo4jev) - Neo4j graph navigation: at each node Jev chooses which relationship to follow, with beam search over log-probabilities
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Experimental Hono router: Jev matches an incoming request to a plain-language route description
 - [sqlite3-jev](https://github.com/mattn/sqlite3-jev) - SQLite C extension: `jev_noul` / `jev_choice` / `jev_score` as SQL functions via libcurl
@@ -123,6 +125,7 @@ Open-source products and demos that put Jev in a real loop.
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in the quickfix window.
 - [jev-skip](https://github.com/valentynkit/jev-skip) - Browser extension that reads the YouTube caption track and paints a per-segment sponsor probability on the seek bar before the intro ends, with no crowd database, reporting catching 77% of SponsorBlock's sponsor seconds across 23 videos at $0.0008 a video.
 - [JevBystander](https://github.com/Nisaka520/JevBystander) - Android accessibility app that reads the visible WeChat chat screen and sends one batched Jev request (10-way intent `Choice`, 9-way emotion distribution, 0-3 urgency `Score`, 11-way reply-posture `Choice`) to show exactly three toasts - no generated reply text, no input injection, no screenshot or OCR; a local contact table supplies relation aliases as state context.
+- [Paper Radar](https://github.com/Eliot5566/JEV-Paper-Radar) - Unofficial daily arXiv and bioRxiv radar. Jev answers one Noul per plain-English interest for every new paper; code applies the thresholds and publishes a page and RSS feed from GitHub Actions. [Live demo](https://eliot5566.github.io/JEV-Paper-Radar/public/) needs no key.
 
 ## Demos & Games
 
@@ -153,6 +156,7 @@ Toys, live sites, and realtime agents.
 - [JevsBistro](https://github.com/andrewsilber/JevsBistro) - Deterministic 3D restaurant sim that replays the same dinner service to compare rule-based, camera-assisted, and Jev-planned waiters, logging each decision's state, options, confidence, and latency.
 - [jev-asks-until-sure](https://github.com/mintannn/jev-asks-until-sure) - Twenty questions where confidence sets the stopping rule: Jev commits, hedges, or refuses to guess, and the UI narrates every judgment. Live: [jev.mintan.org](https://jev.mintan.org).
 - [Jev × 2048](https://jev-2048-ultra.vercel.app) - A web lab where Jev is the 2048 decision engine, showing each move's probability distribution, confidence, latency, and token cost so you can watch how context design shapes the decision model.
+- [Book Aurora](https://github.com/dani1005/book-aurora) - Jev reads a whole novel in seconds: each passage gets nine emotion scores plus intensity in one call, and every passage becomes a feathered row of colour. Frankenstein is 601 passages, 6,010 typed decisions, about 25 s and 3 cents; exports a poster.
 
 ## Agent Tools
 
@@ -161,7 +165,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [TypeSafe agent skill](https://github.com/typesafe-ai/skills) - Official skill: primitives, patterns, and how to structure evaluations. Claude Code: `claude plugin marketplace add typesafe-ai/skills` then `claude plugin install typesafe@typesafe-ai`. Other agents: `npx skills add typesafe-ai/skills --skill typesafe-ai`.
 - [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Claude Code plugin and npm library: Jev scores tool calls and drops stale ones instead of summarizing context
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) - Rust CLI: Jev ranks which agent skill fits the next step from live session context, with Claude Code hooks
-- [langchain-loadout](https://github.com/deyna256/langchain-loadout) - LangChain deepagents middleware for per-turn skill routing: Jev ranks and verifies which SKILL.md skills each turn needs from a catalog of hundreds, splitting the ranking to fit Jev's limits and falling back to the full catalog on failure. The judge is pluggable. `pip install "langchain-loadout[jev]"`.
+- [langchain-skill-router](https://github.com/deyna256/langchain-skill-router) - LangChain deepagents middleware for per-turn skill routing: Jev ranks and verifies which SKILL.md skills each turn needs from a catalog of hundreds, splitting the ranking to fit Jev's limits and falling back to the full catalog on failure. The judge is pluggable. `pip install "langchain-skill-router[jev]"`.
 - [JevRouter](https://github.com/BillionsBobby/JevRouter) - Unofficial router that puts models, subagents, skills, MCP tools, and CLIs in one candidate set: Jev answers one Choice, and code enforces availability, permissions, risk, and confirmation. On 10 Toolathlon tasks, position-wise hits were 38–44% for Jev against 24% for DeepSeek V4.1 Flash
 - [JevLoop](https://github.com/zjunlp/JevLoop) - Unofficial agent loop that sends each fork (tool, risk, done) to Jev 1.13.0 and keeps the LLM for writing; with no key it falls back to local Laya, then rules. `npm run demo` runs offline
 - [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - Unofficial ACP/MCP adapter: typed Jev decisions and computer use beside Codex, Claude, Grok, and OpenCode
@@ -178,7 +182,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [jev-pref](https://github.com/doeixd/jev-pref) - Turn AGENTS.md preferences into a Jev-powered AI linter: project-specific semantic review rules in `jev-pref.json`, checked against hunks, staged files, or PRs, with findings fed back to your coding agent. `npx jev-pref setup`.
 - [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill: ask Jev whenever the agent needs a bounded decision.
 - [jev-system-architect](https://github.com/samtay32/jev-system-architect) - Skill that hunts for brittle semantic logic and turns it into Choice / Score / Noul boundaries.
-- [augustus](https://github.com/24601/Augustus) - Design-judgment skill: maps Choice/Score/Noul onto classical methods (decision theory, rerank, routing) with a composition algebra, question-design diagnosis, and falsifying validation gates
+- [augustus](https://github.com/24601/Augustus) - Unofficial agent skill for finding, building, evaluating, and improving decision-model systems with composition rules, evaluation harnesses, and bounded prompt/program optimization; TypeSafe Jev is the default hosted exemplar
 - [jev-axi](https://github.com/shiftynick/jev-axi) - CLI plus Claude Code and Codex hooks: Jev scores each shell command for hazards before it runs and screens fetched text for prompt injection, with routine commands decided locally so nothing is sent
 - [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - Decision layer for coding agents: deterministic rules before any model call, then one Jev request, as a Claude Code hook, an MCP server, a loopback service and a shared team policy. Ships the 300-call injection test behind its own numbers.
 - [Jevonian](https://github.com/xinyao27/jevonian) - Local OpenAI / Anthropic / Responses-compatible proxy where one Jev call answers both the model route and the thinking level for `jevonian/auto`, from session state (recent messages and tool results, consecutive errors, context headroom, quota, candidate capabilities, cache-switch penalties); deterministic code filters candidates and owns every threshold first, a pinned model or explicit `jevonian/<route>` skips Jev entirely, and each decision is recorded with the serving model, reason, token usage, and estimated cost.
@@ -190,6 +194,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [pytest-jev](https://github.com/allebee/pytest-jev) - pytest plugin for semantic assertions on LLM output: each plain-English claim about a reply becomes a Jev Noul in one request, a claim passes at p ≥ 0.8, and failures print every claim's probability; `choice` and `score` cover routing and rubric checks
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Semantic grep for code, git diffs and CSV rows: one Noul per 5-60 line chunk, 16 chunks per Jev request, grep-style file:line output and exit codes for CI lint rules written in English
 - [jevgrep (allebee)](https://github.com/allebee/jevgrep) - Streaming grep by meaning for logs: asks Jev one Noul per line against a plain-English question and prints the lines at or above a threshold, including from `tail -f`
+- [wellposed](https://github.com/suraj-phanindra/wellposed) - Offline linter and agent skill for Jev requests: 40 structural checks with no model call (missing none-of-the-above options, broken state paths, wrong criteria shapes), plus Jev-on-Jev checks for what structure cannot decide, with labelled corpora that score both layers.
 
 ## Research & Open Models
 
@@ -219,6 +224,7 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [Jev search rerank eval](https://github.com/zhuyansen/jev-search-rerank-eval) - 9,831 labelled pairs: Jev rerank vs BM25 / bge-m3, with judge-circularity measured. Fusion wins; Jev alone does not beat embeddings
 - [Smoking-history extraction benchmark](https://github.com/vclic/smoking-extraction-benchmark) - 1,000 synthetic notes: Jev vs OpenAI structured outputs on accuracy, cost, and latency
 - [Jevals.com](https://jevals.com/) - Independent benchmark of hosted Jev and six LLMs on the same Noul, Choice and Score questions, graded against human labels (PubMedQA, Banking77, HelpSteer2), with per-decision logs as open data
+- [stuntd](https://github.com/bladedevoff/stuntd) - Local proxy on the open Laya model that speaks the Jev System One API, records the app's Choice, Score and Noul answers from a Jev upstream, trains a per-question head, and serves it with a calibrated confidence threshold and fallback to the upstream
 
 ## Articles
 
@@ -230,6 +236,7 @@ Independent measurements and experiments.
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16,000 calls vs gpt-5.4-mini and gpt-5.6-luna; where it wins, where it breaks, and a threshold procedure
 - [Is Jev as Accurate as Frontier Models at Classification?](https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification/) - OpenRouter runs all 3,080 Banking77 test utterances through Jev 1.13 and Claude Opus 5: 81.0% vs 84.4% accuracy, 175 ms vs 2,266 ms median, about $0.11 vs $2.42 per 1,000
 - [We Tested Jev on 791 Labeled Decisions Against Four LLMs](https://www.ayautomate.com/blog/jev-vs-llm-benchmark) - Independent OpenRouter run on 8-way and 77-way Banking77 routing plus prompt-injection detection: Jev matches the small models, trails GPT-5.6 Terra by about 5 points on 77-way routing, and a 0.80 confidence gate that escalates the rest to Terra matches Terra's accuracy at about a quarter of the cost
+- [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - Independent calibration check on fair dice, coins and spinners, where the true probability is known exactly, and on synthetic forecast documents; Jev selects face 1 on all 400 die rolls with 82.9% mean reported probability against 19.0% accuracy. Code and raw responses on [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice).
 
 ## Related
 
