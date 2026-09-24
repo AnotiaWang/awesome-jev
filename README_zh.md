@@ -181,6 +181,7 @@
 - [Bicameral](https://github.com/AbdelStark/bicameral) - Pi 编程 harness：LLM 写代码，Jev 提供策略、循环检测和 review 的类型化反射。明确不是沙箱。
 - [jev-pref](https://github.com/doeixd/jev-pref) - 把 AGENTS.md 里的偏好变成 Jev 驱动的 AI linter：在 `jev-pref.json` 定义项目语义审查规则，对 diff hunk、暂存文件或 PR 求值，并把结果反馈给编程 Agent。`npx jev-pref setup`。
 - [ask-jev-skill](https://github.com/shantanugoel/ask-jev-skill) - Hermes skill：Agent 需要有界决策时去问 Jev。
+- [hermes-jev-skills](https://github.com/kerpopule/hermes-jev-skills) - Hermes（也覆盖 Claude Code 和 Codex）的一组技能：模型路由、技能选择、检索、记忆和压缩交给 Jev。路由大约 0.4 秒，在 377 个技能里挑选大约 2.8 秒。交接摘要的实测召回不如原文，所以交接默认仍保留完整对话
 - [jev-system-architect](https://github.com/samtay32/jev-system-architect) - 专门找脆弱语义逻辑、改写成 Choice / Score / Noul 边界的 skill。
 - [augustus](https://github.com/24601/Augustus) - 非官方的智能体技能，用于发现、构建、评估和改进决策模型系统，提供组合规则、评估框架和有界的提示词／程序优化方法；默认以 TypeSafe Jev 为托管模型示例
 - [jev-axi](https://github.com/shiftynick/jev-axi) - CLI 加 Claude Code、Codex hook：命令执行前先用 Jev 给危险性打分，并筛查抓取到的文本是否含提示注入，常规命令在本地判定、不发送任何内容
@@ -202,8 +203,10 @@
 
 - [Kev](https://github.com/jaredpalmer/kev) - 非官方 Qwen3.5 决策模型（0.8B、4B、9B），可以自己训练和部署。一次前向完成 Choice、Score 和 Noul，权重和固定评测集已公开，本地服务实现 `/v1/systemone`。不是 TypeSafe 的模型
 - [Von](https://github.com/wfzyx/von) - 非官方本地非自回归 System One 模型，服务端兼容 `/v1/systemone`，带 Doom 演示：每步动作是一次前向。不是 TypeSafe 的模型
+- [Laya](https://github.com/NandhaKishorM/laya) - 非官方多语言非自回归决策模型：一次前向完成 Choice、Score 和 Noul，权重和 PyPI 包已公开，并按请求选择检查点。不是 TypeSafe 的模型
+- [NanoJev](https://github.com/TianyuCodings/NanoJev) - 非官方 0.6B 并行决策模型：输入状态和问题，一次前向给出完整分布，不解码文本。权重已公开，同一检查点可玩 ViZDoom、迷宫和贪吃蛇；作者自己的 ViZDoom Basic 划分上是 128/128，对照 Jev 为 56/128。不是 TypeSafe 的模型
 - [jevlike](https://github.com/vinnylarouge/jevlike) - 训练一个小的单次 scorer：上下文 + N 个文本选项 → 每个选项一个概率。含 Doom / 国际象棋视觉 demo，以及 Wikispeedia 下一跳例子。明确*不是* TypeSafe 架构或 RLCD 的复现。
-- [openjev](https://github.com/TheoLeeCJ/openjev) - 家用 RTX 3090 能不能跑 Jev 风格的东西？直接读选项 logits，不生成文本。不是 TypeSafe 的模型。
+- [SemIf](https://github.com/TheoLeeCJ/SemIf-OpenJev) - 原名 OpenJev。非官方：用开源模型在家用 RTX 3090 和浏览器里做类型化决策，直接读选项 logits，不生成文本。不是 TypeSafe 的模型
 - [PocketJev](https://github.com/NullPo-jp/PocketJev) - iPhone 端侧视觉判断：MLX + Qwen3-VL 选项 logits。相机 + 三选一，不生成文字，约 1 秒，不存照片。
 - [jev-visual](https://github.com/hr98w/jev-visual) - Apple Silicon 上的教学向 Jev 风格视觉推理：共享多模态上下文、候选打分，含分拣厂 / Breakout / 手势 demo。不是 TypeSafe 的模型
 - [jevmlx](https://github.com/bnsd55/jevmlx) - 给任意 MLX 模型做 Jev 风格并行约束决策：一次前向得到带概率的、按 schema 合法的 JSON
@@ -237,6 +240,7 @@
 - [Testing Jev on public and private data: classifier or filter?](https://amankumar.ai/blogs/jev-measured) - 16000 次调用对照 gpt-5.4-mini 与 gpt-5.6-luna：哪里赢、哪里崩、阈值怎么定
 - [Is Jev as Accurate as Frontier Models at Classification?](https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification/) - OpenRouter 用全部 3080 条 Banking77 测试集对比 Jev 1.13 与 Claude Opus 5：准确率 81.0% 对 84.4%，中位延迟 175 ms 对 2266 ms，每千次约 $0.11 对 $2.42
 - [We Tested Jev on 791 Labeled Decisions Against Four LLMs](https://www.ayautomate.com/blog/jev-vs-llm-benchmark) - 独立评测，经 OpenRouter 跑 8 类和 77 类 Banking77 路由以及提示注入检测：Jev 与中小模型接近，77 类路由上落后 GPT-5.6 Terra 约 5 个点；置信度不低于 0.80 才采用、其余交给 Terra 时，准确率与 Terra 单独跑对齐，成本大约是其四分之一
+- [Jev × LexGLUE](https://github.com/chepyle/jev-test) - 可复现的零样本评测：Jev 1.13（`typesafe/jev-1.13-20260917`）跑完全部七个 LexGLUE 任务、23607 条测试样本，平均 micro-F1 69.9、花费 $4.02；对照 GPT-5.6 Luna 的对话 JSON 为 71.3、$16.45
 - [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - 独立校准实测：用真实概率已知的公平骰子、硬币和转盘，以及合成预测文档测试 Jev；在 400 次隐藏六面骰实验中，Jev 每次都选择 1，平均报告概率为 82.9%，实际命中率为 19.0%。代码和原始响应见 [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice)。
 
 ## 相关
