@@ -225,6 +225,7 @@ Independent work inspired by Jev's interface. These are not TypeSafe models.
 - [Smoking-history extraction benchmark](https://github.com/vclic/smoking-extraction-benchmark) - 1,000 synthetic notes: Jev vs OpenAI structured outputs on accuracy, cost, and latency
 - [Jevals.com](https://jevals.com/) - Independent benchmark of hosted Jev and six LLMs on the same Noul, Choice and Score questions, graded against human labels (PubMedQA, Banking77, HelpSteer2), with per-decision logs as open data
 - [stuntd](https://github.com/bladedevoff/stuntd) - Local proxy on the open Laya model that speaks the Jev System One API, records the app's Choice, Score and Noul answers from a Jev upstream, trains a per-question head, and serves it with a calibrated confidence threshold and fallback to the upstream
+- [jev-fanout-bench](https://github.com/blowxian/jev-fanout-bench) - Compares batched and separate Jev calls in 2,976 requests through OpenRouter, reporting approximately 261 fixed input tokens per request, charges matching the published token rate, and answer differences comparable to repeat-request noise.
 
 ## Articles
 

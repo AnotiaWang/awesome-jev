@@ -225,6 +225,7 @@
 - [吸烟史抽取评测](https://github.com/vclic/smoking-extraction-benchmark) - 1000 条合成病历：Jev 对 OpenAI structured outputs，比准确率、成本和延迟
 - [Jevals.com](https://jevals.com/) - 独立评测：托管 Jev 与六个 LLM 回答同样的 Noul、Choice、Score 问题，按人工标签打分（PubMedQA、Banking77、HelpSteer2），每次决策的日志公开
 - [stuntd](https://github.com/bladedevoff/stuntd) - 基于开放 Laya 模型的本地代理，实现 Jev System One API；记录来自 Jev 上游的 Choice、Score 和 Noul 答案，为每个问题训练一个决策头，并以校准过的置信度阈值提供服务，低于阈值时回退到上游
+- [jev-fanout-bench](https://github.com/blowxian/jev-fanout-bench) - 用 2976 次经 OpenRouter 的请求比较一次批量提问和拆开提问：每次请求大约有 261 个固定输入 token，费用与公布的 token 单价一致，答案差异和重复请求的噪声相当
 
 ## 文章
 
