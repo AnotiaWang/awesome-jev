@@ -243,6 +243,10 @@
 - [Jev × LexGLUE](https://github.com/chepyle/jev-test) - 可复现的零样本评测：Jev 1.13（`typesafe/jev-1.13-20260917`）跑完全部七个 LexGLUE 任务、23607 条测试样本，平均 micro-F1 69.9、花费 $4.02；对照 GPT-5.6 Luna 的对话 JSON 为 71.3、$16.45
 - [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - 独立校准实测：用真实概率已知的公平骰子、硬币和转盘，以及合成预测文档测试 Jev；在 400 次隐藏六面骰实验中，Jev 每次都选择 1，平均报告概率为 82.9%，实际命中率为 19.0%。代码和原始响应见 [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice)。
 
+社区实践教程。
+
+- [Milvus Search with Jev](https://github.com/milvus-io/bootcamp/tree/master/bootcamp/RAG/search_with_jev) - 9 篇可运行的社区 Notebook，结合 Gemini 嵌入、Milvus 检索与 Jev 判断，覆盖重排、过滤、停搜、路由、缓存复用、数据筛选、护栏和评估
+
 ## 相关
 
 - [MrJev/awesome-jev](https://github.com/MrJev/awesome-jev) - 另一份更严的列表（10 星门槛），[mrjev.com](https://mrjev.com/best-jev-tools/) 上有动手评测，记录每个工具发了什么、发到哪。

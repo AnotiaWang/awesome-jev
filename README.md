@@ -243,6 +243,10 @@ Independent measurements and experiments.
 - [Jev × LexGLUE](https://github.com/chepyle/jev-test) - Reproducible zero-shot run of Jev 1.13 (`typesafe/jev-1.13-20260917`) on all seven LexGLUE tasks, 23,607 test examples: mean micro-F1 69.9 at $4.02, against 71.3 at $16.45 for GPT-5.6 Luna via chat JSON
 - [Jev Does Not Play Dice: 83% probability, 19% accuracy on a hidden fair die roll](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - Independent calibration check on fair dice, coins and spinners, where the true probability is known exactly, and on synthetic forecast documents; Jev selects face 1 on all 400 die rolls with 82.9% mean reported probability against 19.0% accuracy. Code and raw responses on [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice).
 
+Community cookbooks.
+
+- [Milvus Search with Jev](https://github.com/milvus-io/bootcamp/tree/master/bootcamp/RAG/search_with_jev) - Nine runnable Python notebooks combining Gemini embeddings, Milvus retrieval, and Jev decisions for reranking, filtering, search stopping, routing, cache reuse, curation, guardrails, and evaluation
+
 ## Related
 
 - [MrJev/awesome-jev](https://github.com/MrJev/awesome-jev) - Selective list behind a 10-star bar, with hands-on reviews at [mrjev.com](https://mrjev.com/best-jev-tools/) recording what each tool sends and where.
