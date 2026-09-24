@@ -192,6 +192,7 @@ Tools that expose Jev to coding agents and MCP clients.
 - [pytest-jev](https://github.com/allebee/pytest-jev) - pytest plugin for semantic assertions on LLM output: each plain-English claim about a reply becomes a Jev Noul in one request, a claim passes at p ≥ 0.8, and failures print every claim's probability; `choice` and `score` cover routing and rubric checks
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Semantic grep for code, git diffs and CSV rows: one Noul per 5-60 line chunk, 16 chunks per Jev request, grep-style file:line output and exit codes for CI lint rules written in English
 - [jevgrep (allebee)](https://github.com/allebee/jevgrep) - Streaming grep by meaning for logs: asks Jev one Noul per line against a plain-English question and prints the lines at or above a threshold, including from `tail -f`
+- [wellposed](https://github.com/suraj-phanindra/wellposed) - Offline linter and agent skill for Jev requests: 40 structural checks with no model call (missing none-of-the-above options, broken state paths, wrong criteria shapes), plus Jev-on-Jev checks for what structure cannot decide, with labelled corpora that score both layers.
 
 ## Research & Open Models
 
