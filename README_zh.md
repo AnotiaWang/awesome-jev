@@ -86,6 +86,7 @@
 - [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome 扩展：Jev 判断 DOM 元素是不是广告再删掉。自带密钥、无后端。作者写明这是 demo，不是正经广告拦截器
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - 非官方 Home Assistant 集成：把关于实体状态的类型化提问变成传感器与自动化动作；可直接选取实体、设备或区域来构造 state，并附带用量、成本与每日 token 预算实体
 - [Every](https://github.com/sufianetaouil/every) - 语义代码搜索 CLI：对每个函数问 yes/no，按 Noul 概率排序。
+- [JevPDF](https://github.com/kylemclaren/jevpdf) - 非官方的 PDF 语义版 Ctrl+F：pdf.js 在浏览器中逐行提取文本，Jev 对每一行问一个 Noul（这一行是否回答了问题），命中的行按概率排序并高亮
 - [blink](https://github.com/ellipsis-dev/blink) - 代码库搜索：一组 walker 并行走文件系统，由 Jev 判断哪个文件能回答自然语言查询
 - [Jev Search](https://github.com/superagents-lab/jev-search) - 非官方网页搜索应用：用 Jev 的 Choice 和 Noul 判断选择来源、时间范围和候选查询词，再对 Search1API 返回的结果进行相关性排序
 - [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - 非官方 JSON 输入/输出 CLI：使用 Jev 的 `Noul` 判断重排搜索结果、过滤不含可用证据的文档，或提取与查询相关的原文片段

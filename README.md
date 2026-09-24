@@ -86,6 +86,7 @@ Open-source products and demos that put Jev in a real loop.
 - [TypeSafe AdBlock](https://github.com/realZachi/typesafe-adblock) - Chrome extension: Jev judges whether a DOM element is an ad and removes it. BYOK, no backend. Author calls it a demo, not a real ad blocker
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - Unofficial Home Assistant integration: typed questions about entity state become sensors and automation actions, with a target picker that builds the state from the user's own entities and usage, cost, and daily-budget entities alongside the answers
 - [Every](https://github.com/sufianetaouil/every) - Semantic code-search CLI: a yes/no question against every function, ranked by Noul probability.
+- [JevPDF](https://github.com/kylemclaren/jevpdf) - Unofficial Ctrl+F by meaning for PDFs: pdf.js extracts lines in the browser, Jev answers one Noul per line on whether it answers the query, and matching lines light up ranked by probability
 - [blink](https://github.com/ellipsis-dev/blink) - Codebase search: an ensemble of walkers asks Jev which file answers a natural-language query
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Unofficial web search app using Jev's Choice and Noul judgments to select sources, time ranges, and query candidates, then rank results retrieved through Search1API
 - [Jev Reranker (Rust CLI)](https://github.com/shinpr/jev-reranker) - Unofficial JSON-in/JSON-out CLI that uses Jev `Noul` judgments to rerank search results, filter documents without usable evidence, or extract query-specific passages
