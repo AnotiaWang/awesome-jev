@@ -135,6 +135,7 @@ Toys, live sites, and realtime agents.
 - [Jev Tetris](https://jev-omega.vercel.app) - Jev picks rotation and column from holes, stack height, and bumpiness.
 - [Jev Pac-Man](https://jev-pacman.ephraimduncan.com) - Maze as JSON; Jev picks the turn at each junction in realtime.
 - [Jev Chess](https://jevchess.com) - One shared board, the internet vs Jev; every legal move is one Choice question, probabilities shade the pieces, live calibration panel scores every move.
+- [Chess with Jev](https://chriswijnia.com/experiments/chess) - Chess and Chess960 in the browser: code works out each legal move's facts and Jev picks one per turn as a single Choice, with its candidates drawn as arrows
 - [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - Super Mario Bros. from structured emulator state.
 - [jev-doom-agent](https://github.com/lukaske/jev-doom-agent) - Browser-native Doom with Chocolate Doom WASM, spatial state, and live decision telemetry.
 - [jev-gomoku](https://github.com/mizchi/jev-gomoku) - MoonBit client plus Jev-vs-Jev gomoku; write-up: [jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku).
