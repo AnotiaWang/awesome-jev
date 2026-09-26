@@ -237,6 +237,7 @@
 
 独立实测与实验。
 
+- [Jev 搜索场景：三项实测](https://zc277584121.github.io/rag/2026/09/22/jev-search-deep-evaluation.html) - 停搜、记忆重排与多跳关系筛选的独立实测，附实现链接，并说明私有数据、样本数差异与速度动画为模拟等限制
 - [Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216) - 首个 Jev 应用生态综述与分析：覆盖 2,170 个公开 GitHub 项目，记录早期快速增长、应用领域与决策用途分布
 - [Mini-Vibe Check: TypeSafe's Jev Judged Everything I’ve Written in 0.7 Seconds](https://every.to/also-true-for-humans/mini-vibe-check-typesafe-s-jev-judged-everything-i-ve-written-in-0-7-seconds) - Every 的 Mike Taylor 用 Jev 扫过自己的写作语料。
 - [TypeSafeのJevを正しく驚く、それってLLMでできませんか？](https://zenn.dev/nwn/articles/824026c76116e0) - 用 Gemma 的 logit 并行复现 JSON 捷径，并在公开 Mario harness 上对比 Jev 与 LLM。
