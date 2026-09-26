@@ -139,6 +139,7 @@
 - [Jev Tetris](https://jev-omega.vercel.app) - Jev 根据空洞、堆高、起伏选旋转和落点列。
 - [Jev Pac-Man](https://jev-pacman.ephraimduncan.com) - 迷宫做成 JSON，每个路口由 Jev 选转向，实时玩。
 - [Jev Chess](https://jevchess.com) - 全网对 Jev 的一盘共享棋；每个合法着法都是一个 Choice 问题，概率给棋子上色，实时校准面板为每一步打分。
+- [Chess with Jev](https://chriswijnia.com/experiments/chess) - 浏览器里的国际象棋与 Chess960：代码算出每个合法着法的事实，Jev 每回合以一次 Choice 选一步，候选着法画成箭头（[源码](https://github.com/cwdx/chess-with-jev)）。
 - [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - 从结构化模拟器状态玩超级马里奥。
 - [jev-doom-agent](https://github.com/lukaske/jev-doom-agent) - 浏览器里的 Doom（Chocolate Doom WASM），空间状态 + 实时决策遥测。
 - [jev-gomoku](https://github.com/mizchi/jev-gomoku) - MoonBit 客户端 + Jev 对打五子棋。文章：[jev 同士に五目並べで対戦させた](https://zenn.dev/mizchi/articles/jev-plays-gomoku)。
