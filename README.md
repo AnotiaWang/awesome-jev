@@ -248,6 +248,7 @@ Independent measurements and experiments.
 
 - [MrJev/awesome-jev](https://github.com/MrJev/awesome-jev) - Selective list behind a 10-star bar, with hands-on reviews at [mrjev.com](https://mrjev.com/best-jev-tools/) recording what each tool sends and where.
 - [typesafe-ai on PyPI](https://pypi.org/project/typesafe-ai/) - Community redirect shim. The real package is `typesafe-sdk`; this name was registered to block slopsquatting. Not affiliated with TypeSafe.
+- [laya.tools](https://laya.tools) - Unofficial directory of about 950 projects built on the open Laya model, from GitHub, npm, Hugging Face and X, browsable by platform and use case, with a Laya vs Jev comparison. Not affiliated with TypeSafe or ConvAI
 
 ## Contribute
 
