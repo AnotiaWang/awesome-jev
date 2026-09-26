@@ -66,6 +66,8 @@
 - [jev4k](https://github.com/pambrose/jev4k) - 非官方 JVM Kotlin 客户端：用 DSL 写 Choice、Score 和 Noul，答案以类型化的值读回，包括 enum。Maven Central：`com.pambrose:jev4k`
 - [hunch](https://github.com/steven-shoemaker/hunch) - 非官方 Python 库（另有 TypeScript 版本），把 Choice / Score / Noul 变成作用于列表和 DataFrame 的函数（classify、score、check、where、extract、pick、rank、verify），支持请求去重、缓存，并可把不确定的行交给 LLM 在同一组标签中复核
 
+- [JevT++](https://github.com/wiatrM/jevtpp) - 非官方 C++20 库，提供编译期枚举模式、类型化决策与弃权机制、本地 Laya 后端及可选的 TypeSafe System One HTTP 客户端；远程测试使用模拟响应和本地 HTTP 服务，尚未验证真实服务兼容性
+
 ## 应用
 
 把 Jev 放进真实循环里的开源产品与 demo。

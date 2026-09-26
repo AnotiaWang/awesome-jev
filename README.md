@@ -66,6 +66,8 @@ Official first, then community clients. Community packages are not affiliated wi
 - [jev4k](https://github.com/pambrose/jev4k) - Unofficial JVM Kotlin client: Choice, Score, and Noul as a DSL, with answers read back as typed values including enums. Maven Central: `com.pambrose:jev4k`
 - [hunch](https://github.com/steven-shoemaker/hunch) - Unofficial Python library, with a TypeScript port, that turns Choice / Score / Noul into functions over lists and DataFrames (classify, score, check, where, extract, pick, rank, verify), with deduplication, caching, and optional escalation of unsure rows to an LLM that must pick from the same labels
 
+- [JevT++](https://github.com/wiatrM/jevtpp) - Unofficial C++20 library with compile-time enum schemas, typed decisions and abstention, local Laya backends, and an optional TypeSafe System One HTTP client; remote tests use mocks and loopback HTTP, not live-provider validation
+
 ## Applications
 
 Open-source products and demos that put Jev in a real loop.
